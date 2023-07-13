@@ -1,3 +1,5 @@
+
+
 // creating aportfolio tabbed component
 const parent_container_btns = document.querySelector(".parent-container-btns");
 
@@ -31,44 +33,9 @@ parent_container_btns.addEventListener("click", (e) => {
   );
 });
 
-// !-- Initialize Swiper -->
 
-  
-    var swiper = new Swiper(".mySwiper", {
-      speed: 600,
-      parallax: true,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      
-    });
 
-// !scroll to top button functionality----------
 
-const scroll_to_top_element = document.createElement("div");
-
-scroll_to_top_element.classList.add("scroll_to_top_style");
-
-scroll_to_top_element.innerHTML = `<ion-icon name="arrow-up-circle-outline" class="scroll_to_top_icon"></ion-icon>`;
-// *-------
-const footer_element = document.querySelector(".section-footer");
-
-//? The after() method inserts specified content after the selected elements.
-
-footer_element.after(scroll_to_top_element);
-
-// --------------------------------------------------
-const hero_section = document.querySelector(".section-hero");
-
-//? The scrollIntoView() method scrolls an element into the visible area of the browser window.
-
-const scrollTop = () => {
-  hero_section.scrollIntoView({ behavior: "smooth" });
-};
-//when click functionality
-scroll_to_top_element.addEventListener("click", scrollTop);
 // !----------------------------end---------------------------------
 
 // !-----------------anumated no functionality start-----------------------------------------------
@@ -122,18 +89,7 @@ work_observer.observe(work_section);
 
 // !-----------------anumated no functionality end-----------------------------------------------
 
-//? =============================================================responsive navbar=================
-
-const mobile_nav_btn = document.querySelector(".mobile-navbar-btn");
-
-const header_element = document.querySelector(".header");
-
-mobile_nav_btn.addEventListener("click", () => {
-  header_element.classList.toggle("active");
-});
-// ?-------------------end---------------------------
-
-//? =============================================================sticky navbar=================
+/*=============================================================sticky navbar=================*/
 //* we can achive this functionality by---- The getBoundingClientRect() method returns the size of an element and its position relative to the viewport. The getBoundingClientRect() method returns a DOMRect object with eight properties: left, top, right, bottom, x, y, width, height.
 
 const sticky_observer = new IntersectionObserver(
@@ -169,4 +125,3 @@ sticky_observer.observe(hero_section);
   });
   img_observer.observe(imgRef)
 
-//!==================================================
