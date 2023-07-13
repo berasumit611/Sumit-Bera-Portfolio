@@ -76,7 +76,7 @@ function handleWindowResize() {
 
   const mobile_nav_btn = document.querySelector(".mobile-navbar-btn");
 
-  const header_element = document.querySelector(".header");
+  const header_element = document.querySelector("#header");
 
 mobile_nav_btn.addEventListener("click", () => {
   header_element.classList.toggle("active");

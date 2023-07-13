@@ -102,11 +102,7 @@ p{
 .grid-two-column{
         grid-template-columns: repeat(2,1fr);
 }
-.grid-three-column{
-        grid-template-columns: 2fr 1fr 1fr;
-        grid-gap: 2rem;
-        
-}
+
 .grid-four-column{
         grid-template-columns: repeat(4,1fr);
         gap: 1rem;
@@ -163,6 +159,7 @@ hr{
 .navbar .navbar-links a:hover{
     color: #7B68EE;
 }
+
 /* ? bydefault icon not visible */
 .mobile-navbar-btn{
     display: none;
@@ -180,8 +177,6 @@ hr{
 }
 .mobile-nav-icon[name="close-outline"]{
     display: none;
-
-   
     border-radius: 50%;
     background-color: #565fe0;
 }
@@ -405,7 +400,7 @@ background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
     height: 85%;
     width: 0.012rem;
     background-color: #646464;
-    left: -5rem;
+    left: -4rem;
 }
 .timeline ul{
     position: absolute;
@@ -430,8 +425,7 @@ background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
     background-color: #bde5ff;
     border-radius: 50%;
     top: 0;
-    left: -5.5rem;
-
+    left: -4.5rem;
 }
 .timeline ul li:hover:after{
     background-color: #1856ff;
@@ -501,13 +495,13 @@ background-image: linear-gradient(300deg, #ffffff 0%, #5899e2 74%);
    
 }
 
-.portfolio-images{
+.portfolio-images .img-overlay{
     width: 100%; /* Adjust the width of the container as needed */
     height: auto; /* The height will adjust automatically based on the image aspect ratio */
     text-align: center;
     margin-top: 3rem;
 }
-.portfolio-images img{
+.portfolio-images .img-overlay img{
     max-width: 100%; /* Ensures the image doesn't exceed the width of the container */
     max-height: 100%; /* Ensures the image doesn't exceed the height of the container */
     
@@ -545,9 +539,11 @@ background-image: linear-gradient(300deg, #ffffff 0%, #5899e2 74%);
 }
 .overlay .details i{
     font-size: 2rem;
+    color: #40367c;
 }
 .link{
-    color: #1856ff;
+    font-size: 2.5rem;
+    color: #000000;
 }
 .p-btn:active,
 .p-btn:hover{
@@ -561,11 +557,10 @@ background-image: linear-gradient(300deg, #ffffff 0%, #5899e2 74%);
             ANIMATED WORK START 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .section-work-data #wrapper{
-    background-color: #378b29;
-background-image: linear-gradient(315deg, #378b29 0%, #ffffff 74%);
+    background-color: #cdedfd;
+background-image: linear-gradient(319deg, #cdedfd 0%, #ffec82 37%, #ffcfd2 100%);
+
     
-    transition:all 0.7s linear ;
-    color: var(--white);
 }
 .section-work-data #wrapper p{
     text-align: center;
@@ -614,12 +609,9 @@ background-image: linear-gradient(-315deg, #ffffff 0%, #d7e1ec 74%);
 
 
 }
+ 
+
 .box3{
-    grid-row-start: 1;
-    grid-row-end: 2;
-    
-}
-.box4{
   
     grid-row-start: 1;
     grid-row-end: 4;
@@ -628,9 +620,10 @@ background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 
 }
 
-.box4 .contact-form form{
+.box3 .contact-form form{
     display: flex;
     flex-direction: column;
+    
     gap: 1rem;
     
 }
@@ -652,12 +645,10 @@ background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 
 .contact-form form input[type="submit"]{
     border: 0.04rem solid black;
-    width: 50%;
+    width: 51%;
     text-align: center;
     margin-top: 2rem;
     font-size: 1.4rem;
-    
-   
 }
  .contact-form form input[type="submit"]:hover{
  background-color: #000000;
@@ -673,6 +664,13 @@ align-items: center;
 justify-content: space-evenly;
 gap: 0.5rem;}
 .social-links ul li i{
+    
+    font-size: 3rem;
+    padding: 1rem;
+   
+}
+.social-links ul li i:hover{
+    color: #565fe0;
     font-size: 3rem;
     padding: 1rem;
    
@@ -703,6 +701,7 @@ footer{
 .credits {
     color: #cfcfe1;
     font-size: 1.5rem;
+    text-align: left;
 }
 .credits-name{
     color: #999999;
@@ -724,7 +723,7 @@ footer{
 }
 .scroll_to_top_icon{
     
-    background-color: #7B68EE;
+    background-color:transparent;
     display: inline-block;
     padding: 1rem;
     font-size: 2rem;
@@ -733,24 +732,24 @@ footer{
     
 }
 
-
 /* ?+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                    RESPONSIVE
+                               START 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-  @media (min-width: 300px) and (max-width: 576px) {
-    /*------------------------------------------------*/
 
-    .header{
-        position: relative;
+@media (min-width: 300px) and (max-width: 576px) {
+    
+    
+    .grid-two-column{
+        grid-template-columns: 1fr;
+    }
+    #header{
+        position:relative;
         justify-content: space-between;
     }
     .mobile-navbar-btn{
         display: block;
         z-index: 999;
-       
     }
-    
-    
     .navbar{
         z-index: 999;
         width: 100%;
@@ -764,8 +763,6 @@ footer{
         justify-content: center;
         align-items: center;
        
-        /** send left sild bydefault */
-
         transform: translateY(-100%);
         transition:all 0.3s linear;
         
@@ -774,8 +771,7 @@ footer{
         pointer-events: none;
     }
     .navbar .navbar-links{
-        /* flex-direction: column;
-        align-items: flex-start; */
+        
         gap: 1.2em;
         font-size: 1.8em;
         color: #777;
@@ -799,17 +795,16 @@ footer{
                          DEFAULT
     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-    .grid-two-column{
-        grid-template-columns: 1fr;
-    }
+    
     h2{
         text-align: center;
     }
+    
     /* ?+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                         HERO
     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
     .section-hero #wrapper{
-        min-height: 65vh;
+        height: 85vh;
         
     }
     .intro h1{
@@ -819,97 +814,121 @@ footer{
         color: #e4e4e4;
         text-align: center;
     }
-    /* ?+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    ABOUT-BIODATA
-    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/    
+      
+/*+++++++++++ biodata / about section ++++++++++*/
 
     .section-biodata .grid-two-column{
         grid-template-columns: 1fr;
     }
-    .about{
-        background-color:#b6cfcf ;
-    }
-    .skills{
-        background-color: #e5f3f3;
-    }
-    
-    .utility-btn{
+    .about p{
+        font-size: 1.2em;
+        
+        }
+    .resumebtn {
+        align-items: center;
         justify-content: center;
-    }
-   /* ?+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                     COUNTER NUMBER
-   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-    .counter-numbers{
-        font-size: 1.5rem;
-
-    }
-   
-
-    /*------------------------------------------------*/
-    .flexbox{
-        flex-direction: column;
-       
-       
-    }
-    .swiper{
-        width: 85vw;
-    }
-   
-    .client-img{
-        display: none;
-    }
-    .testimonials .client-message h3{
-        
-        text-align: center;
-        
-    }
-/*------------------------------------------------*/    
-
-    /*------------------------------------------------*/
-    .grid-two-column-two-row{
+        gap: 2em;
+      }
+/*+++++++++++ education-and-experience ++++++++++*/
+    
+    .section-experience-and-education .grid-two-column-two-row{
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: 1fr 5fr 1fr 5fr;
+    }
+    .experience-title,.experience-data{
+        order: 1;
+    }
+    .education-title,.education-data{
+        order: 2;
+    }
+    .experience-title h3,.education-title h3{
+       text-align: center;
+        
+    }
+    .timeline ul::before{
+        left: 2em;
+    }
+    .timeline ul{
+       left: 2em;
+    }
+    .timeline ul li{
+        width: 95%;
+    }
+/*+++++++++++ portfolio ++++++++++*/
+   
+    .hedading-and-filter{
+        margin-bottom: 2em;
+    }
+    .portfolio-images .img-overlay{
+        margin-top: 0.5em;
+    }
+    .overlay h3{
+        font-size: 1.8em;
+    }
+    .overlay .details{
         gap: 1em;
     }
-
-    .left-section,.right-top-section,.right-buttom-section{
-        grid-column: auto;
-        width: 90vw;
+    .overlay .details i{
+        font-size: 1.5em;
+        
     }
-    iframe{
-        width: 90vw;
+    .link{
+        font-size: 2em;
+        
     }
+/*+++++++++++ animated work data ++++++++++*/
 
-    .social-links ul{
-        gap: 1rem;
-    }
-    .social-links ul li i{
-        font-size: 1.8rem;
-    }
-    /*------------------------------------------------*/
+.grid-four-column{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.counter-numbers{
+    font-size: 1.5em;
+}
+/*+++++++++++ contact ++++++++++*/
+    .section-contact .grid {
+        
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 0.2fr;
+        
+      }
+      .box1 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      .box3 {
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+      .box2 {
+        grid-row-start: 3;
+        grid-row-end: 4;
+      }
 
+/*+++++++++++ scroll-to-top ++++++++++*/
 
+.scroll_to_top_style{
+    left: 1em;
+    
+}
+.scroll_to_top_icon{
+    font-size: 1.5em;
+    border-radius: 50%;
+   
+}
 
+/*+++++++++++ footer ++++++++++*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*------------------------------------------------*/
-    .section-footer .container .row{
+#footer .container .row{
         direction: rtl;
-  }
-  .section-footer .container .row p{
+}
+  #footer .container .row p{
     font-size: 1em;
   }
-  /*------------------------------------------------*/
+  .credits{
+    text-align: right;
   }
+  
+
+}
  
