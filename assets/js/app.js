@@ -157,3 +157,10 @@ function animateNumbers() {
 
 animateNumbers();
 
+///-----------------
+function mouseOver(){
+  document.getElementsByClassName('skills').classList.add('flip-horizontal-bottom');
+}
+function mouseOut(){
+  document.getElementsByClassName('skills').classList.remove('flip-horizontal-bottom');
+}
