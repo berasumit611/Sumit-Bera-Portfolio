@@ -87,7 +87,6 @@ const work_observer = new IntersectionObserver(
 
 work_observer.observe(work_section);
 
-// !-----------------anumated no functionality end-----------------------------------------------
 
 /*=============================================================sticky navbar=================*/
 //* we can achive this functionality by---- The getBoundingClientRect() method returns the size of an element and its position relative to the viewport. The getBoundingClientRect() method returns a DOMRect object with eight properties: left, top, right, bottom, x, y, width, height.

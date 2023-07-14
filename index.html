@@ -36,20 +36,25 @@
     <title>Sumit Bera Portfolio</title>
   </head>
 
-  <body>
+  <body >
+    <!-- Preloader element -->
+  <div class="preloader">
+    <div class="preloader-spinner"></div>
+  </div>
+
     <!--?----- navbar starts ------->
-    <header id="header">
+    <header id="header" class="header">
       <div class="logo"><a href="#">Sb</a></div>
 
       <nav class="navbar ">
         <ul class="navbar-links">
-          <li><a href="#">Home</a></li>
+          <li><a href="#hero">Home</a></li>
 
-          <li><a href="#">About</a></li>
+          <li><a href="#about">About</a></li>
 
-          <li><a href="#">Portfolio</a></li>
+          <li><a href="#portfolio-section">Portfolio</a></li>
 
-          <li><a href="#">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -63,7 +68,7 @@
 
     <!--?----- hero section start ------->
     <main >
-      <section class="section-hero" id="hero">
+      <section class="section-hero section" id="hero">
         <div id="wrapper" class="grid grid-two-column parent">
           <div class="intro common-padding">
             <h1>
@@ -384,6 +389,9 @@
 
             </div>
           </div>
+
+          
+
         </div>
       </div>
     </section>
@@ -395,22 +403,22 @@
     <div class="grid grid-four-column" id="wrapper">
       <div>
         <!--? using data attribute -->
-        <p class="counter-numbers" data-number="500">0+</p>
+        <p class="counter-numbers" >1000+</p>
         <p>Hours of Code</p>
       </div>
 
       <div>
-        <p class="counter-numbers" data-number="20">0+</p>
+        <p class="counter-numbers" >20000+</p>
         <p>Self Projects</p>
       </div>
 
       <div>
-        <p class="counter-numbers" data-number="1020">0+</p>
+        <p class="counter-numbers" >3000+</p>
         <p>Demo</p>
       </div>
 
       <div>
-        <p class="counter-numbers" data-number="2000">0+</p>
+        <p class="counter-numbers" >500+</p>
         <p>Demo</p>
       </div>
 
@@ -418,7 +426,8 @@
   
 </section>
 <!--++++++++ animated work section end ++++++++-->
-    <!--?----- contact secion start ------->
+    
+<!--?----- contact secion start ------->
     <section class="section section-contact" id="contact">
       
         <div id="wrapper" class="grid">
@@ -513,7 +522,7 @@
     <!--++++++++ contact section end ++++++++-->
     
     <!--?----- footer start ------->
-    <footer id="footer">
+    <footer id="footer" class="footer">
       <div class="container" id="wrapper">
         
         <div class="row">
