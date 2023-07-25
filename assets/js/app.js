@@ -89,20 +89,20 @@ scroll_to_top_element.addEventListener("click",()=>{
                            header section responcive
                            remove img div
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-function removeIntroImg() {
-    const introImgDiv = document.querySelector('.intro-img');
-    if (introImgDiv) {
-      introImgDiv.remove();
-    }
-  }
+// function removeIntroImg() {
+//     const introImgDiv = document.querySelector('.intro-img');
+//     if (introImgDiv) {
+//       introImgDiv.remove();
+//     }
+//   }
   
-function handleWindowResize() {
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 576) {
-      removeIntroImg();
-    }
-    else return;
-  }
+// function handleWindowResize() {
+//     const screenWidth = window.innerWidth;
+//     if (screenWidth < 576) {
+//       removeIntroImg();
+//     }
+//     else return;
+//   }
   
   // Execute on initial load
   handleWindowResize();
@@ -115,11 +115,12 @@ function handleWindowResize() {
   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--*/
 
   const mobile_nav_btn = document.querySelector(".mobile-navbar-btn");
-
-  const header_element = document.querySelector("#header");
+  const navbar=document.querySelector('.navbar')
+  
 
 mobile_nav_btn.addEventListener("click", () => {
-  header_element.classList.toggle("active");
+  console.alart("hi");
+  navbar.style.visibility=visible;
 });
 
 
