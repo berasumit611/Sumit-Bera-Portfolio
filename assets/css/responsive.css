@@ -1,0 +1,18 @@
+/*+++++++++++ medium laptop ++++++++++*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    #wrapper{
+        width: 85vw;
+    }
+
+    #portfolio #wrapper .grid-two-column{
+        grid-template-columns: 1fr;
+    } 
+
+    #footer .container{
+        width: 85vw;
+    }
+}
+/*+++++++++++ Mobile ++++++++++*/   
+@media (min-width:320) and (max-width:425){
+    
+} 

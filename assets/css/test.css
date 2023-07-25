@@ -1,0 +1,196 @@
+@media (min-width: 300px) and (max-width: 576px) {
+    
+    
+    .grid-two-column{
+        grid-template-columns: 1fr;
+    }
+    #header{
+        position:relative;
+        justify-content: space-between;
+    }
+    .mobile-navbar-btn{
+        display: block;
+        z-index: 999;
+    }
+    .navbar{
+        z-index: 999;
+        width: 100%;
+        height: 40vh;
+        position: absolute;
+        padding: 0 1em;
+        top: 0;
+        left:0;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        transform: translateY(-100%);
+        transition:all 0.3s linear;
+        
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .navbar .navbar-links{
+        
+        gap: 1.2em;
+        font-size: 1.8em;
+        color: #777;
+    }
+    
+    /** when active class activated then navbar show */
+    .active .navbar{
+        transform: translateY(0%);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"]{
+        display: block;
+    }
+    .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"]{
+        display: none;
+    }
+    /* ?+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                         DEFAULT
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+    
+    h2{
+        text-align: center;
+    }
+    
+    /* ?+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                        HERO
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+    .section-hero #wrapper{
+        height: 85vh;
+        
+    }
+    .intro h1{
+        font-weight: 400;
+        line-height: 5rem;
+        font-size: 4rem;
+        color: #e4e4e4;
+        text-align: center;
+    }
+      
+/*+++++++++++ biodata / about section ++++++++++*/
+
+    .section-biodata .grid-two-column{
+        grid-template-columns: 1fr;
+    }
+    .about p{
+        font-size: 1.2em;
+        
+        }
+    .resumebtn {
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+      }
+/*+++++++++++ education-and-experience ++++++++++*/
+    
+    .section-experience-and-education .grid-two-column-two-row{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5fr 1fr 5fr;
+    }
+    .experience-title,.experience-data{
+        order: 1;
+    }
+    .education-title,.education-data{
+        order: 2;
+    }
+    .experience-title h3,.education-title h3{
+       text-align: center;
+        
+    }
+    .timeline ul::before{
+        left: 2em;
+    }
+    .timeline ul{
+       left: 2em;
+    }
+    .timeline ul li{
+        width: 95%;
+    }
+/*+++++++++++ portfolio ++++++++++*/
+   
+    .hedading-and-filter{
+        margin-bottom: 2em;
+    }
+    .portfolio-images .img-overlay{
+        margin-top: 0.5em;
+    }
+    .overlay h3{
+        font-size: 1.8em;
+    }
+    .overlay .details{
+        gap: 1em;
+    }
+    .overlay .details i{
+        font-size: 1.5em;
+        
+    }
+    .link{
+        font-size: 2em;
+        
+    }
+/*+++++++++++ animated work data ++++++++++*/
+
+.grid-four-column{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.counter-numbers{
+    font-size: 1.5em;
+}
+/*+++++++++++ contact ++++++++++*/
+    .section-contact .grid {
+        
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 0.2fr;
+        
+      }
+      .box1 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      .box3 {
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+      .box2 {
+        grid-row-start: 3;
+        grid-row-end: 4;
+      }
+
+/*+++++++++++ scroll-to-top ++++++++++*/
+
+.scroll_to_top_style{
+    left: 1em;
+    
+}
+.scroll_to_top_icon{
+    font-size: 1.5em;
+    border-radius: 50%;
+   
+}
+
+/*+++++++++++ footer ++++++++++*/
+
+#footer .container .row{
+        direction: rtl;
+}
+  #footer .container .row p{
+    font-size: 1em;
+  }
+  .credits{
+    text-align: right;
+  }
+  
+
+}
+ 
