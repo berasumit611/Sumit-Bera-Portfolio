@@ -43,16 +43,17 @@
   </div>
 
     <!--?----- navbar starts ------->
-    <header id="header" class="header">
-      <div class="logo"><a href="#">Sb</a></div>
+    <header id="header" >
+      <div id="wrapper">
+      <div class="logo "><a href="#">Sb</a></div>
 
-      <nav class="navbar ">
+      <nav>
         <ul class="navbar-links">
           <li><a href="#hero">Home</a></li>
 
           <li><a href="#about">About</a></li>
 
-          <li><a href="#portfolio-section">Portfolio</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
 
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -63,40 +64,42 @@
         <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
         <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
       </div>
+    </div>
     </header>
-    <!--++++++++ navbar end ++++++++-->
+    
 
     <!--?----- hero section start ------->
     <main >
-      <section class="section-hero section" id="hero">
-        <div id="wrapper" class="grid grid-two-column parent">
+      <section id="hero">
+        <div id="wrapper">
           <div class="intro common-padding">
             <h1 >
               <span>Hola!</span> I Am Sumit. Passionate frontend web developer
               and designer.
             </h1>
           </div>
-
+         
           <div class="intro-img">
-            <img src="./assets\images\hero.png" alt="hero image" />
+            <img src="experimental-linear-waves.png" alt="hero image">
           </div>
+
         </div>
       </section>
     </main>
-    <!--++++++++ hero section end ++++++++-->
+    
 
     <!--?----- about section start ------->
-    <section class="section-biodata section" id="about">
-      <div class="grid grid-two-column" id="wrapper">
+    <section id="about">
+      <div id="wrapper">
         <div class="about common-padding">
           <h2 >About</h2>
-          <br>
+          
           <p>
             Hello, and welcome to my portfolio website! My name is Sumit Bera,
             and I'm currently a final year undergraduate student in Electrical
             Engineering.
           </p>
-          <br />
+          
           <p>
             My programming skills include C, C++, and JavaScript, and I'm
             constantly learning and exploring new technologies to improve my
@@ -104,57 +107,69 @@
             development, and I'm currently honing my skills in this area. In
             addition to my academic pursuits, I'm also an aspiring front-end
             developer, and I'm actively seeking opportunities to apply my skills
-            in real-world projects. <br /><br />
+            in real-world projects. <br><br>
             I'm a hard-working and detail-oriented individual with excellent
             problem-solving skills, and I'm always looking for ways to challenge
             myself and push the boundaries of what's possible.
           </p>
-          <br />
-          <p>Connect and Check my activity on GitHub & Linkedin.</p>
+          
+          <p>I invite you to explore my portfolio to see some of the exciting projects I've been a part of. If you have a project in mind or just want to connect, I'd love to hear from you. Let's work together to bring your digital visions to life!</p>
         </div>
 
-        <div class="skills common-padding " onclick="mouseOver()" onmouseout="mouseOut()">
+        <div class="skills common-padding">
           <h2>Technical Skills</h2>
-         
-          <br>
+          
           <div class="bio-data-stats">
             <div class="bio-stats">
-              <h3>HTML</h3>
               <div class="bio-progress-bar">
-                <span>85%</span>
+                <span>80%</span>
               </div>
+              <h3>C language</h3>
             </div>
 
             <div class="bio-stats">
-              <h3>CSS</h3>
+              
               <div class="bio-progress-bar bio-progress-2">
                 <span>70%</span>
               </div>
+              <h3>C++</h3>
             </div>
 
             <div class="bio-stats">
-              <h3>JavaScript</h3>
+              
               <div class="bio-progress-bar bio-progress-3">
+                <span>85%</span>
+              </div>
+              <h3>HTML5</h3>
+            </div>
+
+            <div class="bio-stats">
+              
+              <div class="bio-progress-bar bio-progress-4">
+                <span>80%</span>
+              </div>
+              <h3>CSS3</h3>
+            </div>
+
+            <div class="bio-stats">
+              
+              <div class="bio-progress-bar bio-progress-5">
                 <span>65%</span>
               </div>
+              <h3>JavaScript</h3>
             </div>
 
             <div class="bio-stats">
+              <div class="bio-progress-bar bio-progress-6">
+                <span>80%</span>
+              </div>
               <h3>Responsive Web Design</h3>
-              <div class="bio-progress-bar bio-progress-4">
-                <span>70%</span>
-              </div>
+
             </div>
 
-            <div class="bio-stats">
-              <h3>Coding & DSA</h3>
-              <div class="bio-progress-bar bio-progress-5">
-                <span>60%</span>
-              </div>
-            </div>
           </div>
 
-          <div class="resumebtn">
+          <div class="utility-btn">
             <a
               href="#"
               target="_blank"
@@ -169,16 +184,15 @@
               ><span>GitHub</span>
               <i class="fas fa-chevron-right"></i>
             </a>
+           
           </div>
           
         </div>
       </div>
     </section>
-    <!--++++++++ about section end ++++++++-->
-    
+  
     <!--?----- education & experience section start ------->
     <section
-      class="section-experience-and-education section"
       id="experience-and-education"
     >
       <div id="wrapper">
@@ -315,12 +329,12 @@
         </div>
       </div>
     </section>
-    <!--++++++++ education & experience section end ++++++++-->
+    
     
   
 
-  <!--?----- portfolio section start ------->
-    <section class="section section-portfolio" id="portfolio-section">
+    <!--?----- portfolio section start ------->
+    <section id="portfolio-section">
       <div id="wrapper">
         <div class="hedading-and-filter">
           <h2
@@ -395,10 +409,9 @@
         </div>
       </div>
     </section>
-  <!--++++++++ portfolio section end ++++++++-->
-    
-  <!--?----- animated work section start ------->
-  <section class="section section-work-data" id="work-data">
+  
+    <!--?----- animated work section start ------->
+  <section id="work-data">
      
     <div class="grid grid-four-column" id="wrapper">
       <div>
@@ -425,42 +438,17 @@
     </div>
   
 </section>
-<!--++++++++ animated work section end ++++++++-->
     
-<!--?----- contact secion start ------->
-    <section class="section section-contact" id="contact">
+    <!--?----- contact secion start ------->
+    <section id="contact">
       
-        <div id="wrapper" class="grid">
+        <div id="wrapper">
           
           <div class="box1">
-            
-            <h2 class="common-padding">Get in touch</h2>
-          </div>
-        
-          <div class="box2">
-            <div class="social-links common-padding">
-            <ul>
-              <li>
-                <a href="https://linkedin.com/in/berasumit611" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="https://twitter.com/berasumit611" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="https://github.com/berasumit611"><i class="fa-brands fa-github" target="_blank"></i></a>
-              </li>
-              <li>
-                <a href="mailto:berasumit611@gmail.com"><i class="fa-solid fa-envelope" target="_blank"></i></a>
-              </li>
-              <li>
-                <a href="tel:+918777245574"><i class="fa-solid fa-headset" target="_blank"></i></a>
-              </li>
-            </ul>
-            </div>
+            <h2>Get in touch</h2>
           </div>
 
-          
-          <div class="box3">
+          <div class="box2">
             <div class="contact-form common-padding">
             <form action="https://formspree.io/f/xrgwgbwg" method="POST">
               
@@ -515,39 +503,62 @@
             </form>
           </div>
           </div>
-          
+        
         </div>
       
     </section>
-    <!--++++++++ contact section end ++++++++-->
     
+
     <!--?----- footer start ------->
-    <footer id="footer" class="footer">
+    <footer id="footer">
       <div class="container" id="wrapper">
         
         <div class="row">
+
           <div class="col-6 left-footer-section">
-            <p class="credits">
+           <p class="credits">
               Designed, Developed & Crafted by
               <span class="credits-name">Sumit Bera</span> © 2023
             </p>
           </div>
 
-          <div class="col-6 right-footer-section" style="color: aliceblue;">
+          <div class="col-6 right-footer-section">
             
-            <a href="https://www.india.gov.in/" target="_blank">
+            <div class="social-links">
+                <ul>
+                  <li>
+                    <a href="https://github.com/berasumit611"><i class="fa-brands fa-github" target="_blank"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://linkedin.com/in/berasumit611" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/berasumit611" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                  </li>
+                  
+                  <li>
+                    <a href="mailto:berasumit611@gmail.com"><i class="fa-solid fa-envelope" target="_blank"></i></a>
+                  </li>
+                  <li>
+                    <a href="tel:+918777245574"><i class="fa-solid fa-headset" target="_blank"></i></a>
+                  </li>
+                </ul>
+              </div>
+            
+            <!-- <a href="https://www.india.gov.in/" target="_blank">
               <img
-                width="48"
-                height="48"
+                width="45"
+                height="45"
                 src="https://img.icons8.com/color/48/india.png"
                 alt="india"
-            /></a>
+            /></a> -->
           </div>
+
         </div>
+
       </div>
-      
     </footer>
-    <!--++++++++ footer end ++++++++-->
+    
 
     
 
