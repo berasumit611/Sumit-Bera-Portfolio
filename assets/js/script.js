@@ -165,3 +165,5 @@ function mouseOver(){
 function mouseOut(){
   document.getElementsByClassName('skills').classList.remove('flip-horizontal-bottom');
 }
+
+// ------------bio data stats rendering
