@@ -58,8 +58,32 @@ h4{
     font-size: 2rem;
     font-weight: 200;
   }
-  
-
+  .btn {
+    padding: 1rem 1.5rem;
+    background-color: #cdbbe0;
+    transition: 0.3s;
+    color: #141414;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+  .btn:hover{
+    background-color: #9988ac;
+}
+ .btn span {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+ .btn i ,.btn img{
+    margin-left: 0.3rem;
+    font-size: 1.2rem;
+    transition: 0.3s;
+  }
+   .btn:hover i ,.btn:hover img{
+    transform: translateX(0.5rem);
+    
+  }
 
 .grid{
         display: grid;
@@ -244,6 +268,9 @@ z-index: 1;
 
 /*+++++++++++ about section start ++++++++++*/
 h2{
+    display: flex;
+    align-items: center;
+    text-align: left;
     padding: 1rem;
     font-weight: 300;
     line-height: 4rem;
@@ -361,29 +388,8 @@ left: 65%;
     align-items: center;
     justify-content: space-evenly;
   }
-.utility-btn > .btn {
-    padding: 1rem 1.5rem;
-    background-color: #cdbbe0;
-    transition: 0.3s;
-    color: #141414;
-    border-radius: 0.4rem;
-}
-.utility-btn > .btn:hover{
-    background-color: #9988ac;
-}
-.utility-btn > .btn span {
-    font-size: 1.5rem;
-    letter-spacing: 0.1rem;
-  }
-.utility-btn > .btn i {
-    margin-left: 0.3rem;
-    font-size: 1.2rem;
-    transition: 0.3s;
-  }
-  .utility-btn .btn:hover i {
-    transform: translateX(0.5rem);
-    
-  }
+ 
+ 
 
 
 #experience-and-education {
@@ -466,12 +472,33 @@ left: 65%;
     
 }
 
+
+#tech-stack{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 9fr;
+    /* background-color: #eaf1a3; */
+    
+}
+
+.tech-stack-container{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+#tech-stack h2{
+    margin-bottom: 0;
+}
 /*+++++++++++ animated work section start ++++++++++*/
 #work-data{
+    background-color: #f9fcff;
+background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
     height: auto;
     padding: 2rem;
-    background-color: #cdedfd;
-    background-image: linear-gradient(319deg, #cdedfd 0%, #ffec82 37%, #ffcfd2 100%); 
+    /* background-color: #cdedfd;
+    background-image: linear-gradient(319deg, #cdedfd 0%, #ffec82 37%, #ffcfd2 100%);  */
 }
 
 #work-data  p{
@@ -489,7 +516,8 @@ left: 65%;
     align-items: center;
     height: 95vh;
     position: relative;
-    background-color: #dfdfdf;
+    background-color: #ffffff;
+background-image: linear-gradient(315deg, #ffffff 0%, #91a6ff 74%);
 }
 #portfolio .left{
     width: auto;
@@ -514,7 +542,8 @@ left: 65%;
 /*+++++++++++ contact section start ++++++++++*/
 
 #contact {
-    background-color: #b09bfc;
+    margin-top: 10rem;
+    background-color: #a290e2;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -561,20 +590,14 @@ left: 65%;
 }
 
 
-/*+++++++++++ footer start ++++++++++*/
+
 #footer{
-   height: 10rem;
+    padding: 0 2rem;
+   height: 15rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid black;
-    
-}
-
-.left-footer-section , .right-footer-section{
-    display: flex;
-    align-items: center;
-    
 }
 .left-footer-section p{
     margin: 0;
@@ -586,16 +609,15 @@ left: 65%;
     text-align: left;
 }
 .credits-name{
-   
     color: #000000;
 }
-.right-footer-section{
-    justify-content: flex-end;
-}
+
+
 .social-links ul{
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
+
 
 .social-links ul li i{
     font-size: 2rem;
@@ -612,7 +634,7 @@ left: 65%;
 .scroll_to_top_style{
     position: fixed;
     right:3%;
-    bottom: 12%;
+    bottom: 20%;
     z-index: 1;
     /* by default display none */
     display: none;
