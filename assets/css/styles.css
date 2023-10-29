@@ -339,7 +339,7 @@ top: 0;
 left: 0;
 width: 80%;
 height:inherit; 
-background: #E91E63;
+background: #030322;
 border-radius: 10rem;
 
 }
@@ -349,7 +349,7 @@ content: "";
 position: absolute;
 top: -0.7rem;
 padding: 0.5rem;
-border: 0.2rem solid #E91E63;
+border: 0.2rem solid #030522;
 border-radius: 50%;
 background-color: transparent;
 }
