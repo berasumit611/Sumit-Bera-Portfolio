@@ -21,7 +21,7 @@ html{
 }
 
 body{
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
     font-family: "Poppins", sans-serif;
     font-style: normal;
 }
@@ -214,7 +214,7 @@ p{
 
 /*+++++++++++ hero section start ++++++++++*/
 section{
-    
+
     width: 100%;
     height: auto;
     margin-bottom: 8rem;
