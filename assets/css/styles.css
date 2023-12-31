@@ -1,10 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
-*{
+*,*::after,*::before{
     padding: 0;
     margin: 0;
-    border: 0;
     box-sizing: border-box;
     vertical-align: baseline;
     text-decoration: none;
@@ -21,7 +20,6 @@ html{
 }
 
 body{
-    background-color: whitesmoke;
     font-family: "Poppins", sans-serif;
     font-style: normal;
 }
@@ -38,16 +36,6 @@ ul {
     margin: 0;
 }
 
-
-h1, h2, h3, h4 {
-    font-family: 'Poppins', sans-serif;
-    color: black;
-}
-h1 {
-    font-size: 6rem;
-    font-weight: 600;
-    
-}
 
 h3{
     font-size: 2.5rem;
@@ -144,29 +132,51 @@ h4{
     100% { transform: rotate(360deg); }
   }
 
- main{
-    margin: 0 auto;
-    height: auto;
-    width: 85vw;
-    
- }
  
-p{
+ 
+/* p{
     color: #5b5b5b;
     line-height: 1.6;
     font-size: 1.5rem;
     text-align: justify;
     text-transform: none;
-}
-
-#header{
+} */
+p {
+    overflow-wrap: break-word;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 1rem; /* Optional spacing */
+  }
+/*-----------main----------*/
+main {
+    margin: 0 auto;
+    height: auto;
+    width: 85vw;
+    position: relative; /* Add this to make the main element the reference point for positioning */
+  }
+  /*-----------header navbar----------*/
+#header {
     width: 100%;
     height: 8rem;
     padding: 2rem;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
-}
+    position: sticky; /* Use sticky for relative positioning within main */
+    top: 0; /* Stays at the top of the main element */
+    z-index: 100; /* Ensure it stays on top of other content */
+    background-color: #ffffff;
+  }
+  /*-----------all sections----------*/
+section{
+    margin-top: 2rem; /* Add spacing between sections */
+    padding: 8rem 2rem 2rem 2rem;
+    width: 100%;
+    height: auto;
+    border-radius: 0.8rem;
+ }
+/*-----------inside header----------*/
 #header .logo{
     display: flex;
     align-items: center;
@@ -212,14 +222,7 @@ p{
     background-color: #565fe0;
 } */
 
-/*+++++++++++ hero section start ++++++++++*/
-section{
-    
-    width: 100%;
-    height: auto;
-    margin-bottom: 8rem;
-    border-radius: 0.8rem;
- }
+/*-----------hero section----------*/
  #hero {
     min-height: 75vh;
     overflow: hidden;
@@ -231,19 +234,20 @@ section{
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1;/* Ensure image is behind overlay */
 }
-#hero > .vedio-container img{
+#hero .img-container img{
     width:100%;
     height: 100%;
     object-fit: cover;
-    
-    
 }
 #hero > .overlay{
-    background-color: rgba(0, 0, 0, 0.705); 
+    background-color: rgba(0, 0, 0, 0.911); 
     /* Add a semi-transparent black background */
+    /* Ensure overlay covers the entire section */
     position: absolute;
+    top: 0;
+    left: 0;
     
     width: 100%;
     height: 100%;
@@ -251,6 +255,7 @@ section{
 #hero > .text-container{
 position: absolute;
 top: 50%;
+left: 50%;
 left: 0; 
 /* perfectly y axis wise center */
 transform: translateY(-50%);
@@ -264,55 +269,53 @@ z-index: 1;
     color: whitesmoke;
     text-align:left;
     padding: 2rem;
-
 }
 #hero > .text-container  h1 > span{
     color: #97f57a;
 }
-
-/*+++++++++++ about section start ++++++++++*/
+/*-----------all subtitle----------*/
 h2{
-    display: flex;
-    align-items: center;
-    text-align: left;
-    padding: 1rem;
+    justify-self: center;
+    padding: 2rem 2rem 2rem 0;
     font-weight: 300;
     line-height: 4rem;
     font-size: 3.5rem;
+    margin-bottom: 1rem;
     
   }
+/*-----------about section----------*/
+
 #about {
-    
     background-color: #F6F4EB;
-    display: grid;
-    grid-template-columns:2.5fr 0.8fr;
-    grid-template-rows: auto;
-    gap: 2rem;
-    padding-bottom: 1rem;
-   
+    display: flex;
+    gap: 2.5rem;
+    /* padding-bottom: 1rem; */
+
 }
-#about .about-myself , .skills-stats{
+#about .about-myself{
+    flex: 0.7;
+}
+#about .skills-stats{
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+}
+/* #about .skills-stats{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-#about  .about-myself article{
-  
-   
+} */
 
-    padding: 1.5rem;
-   
-}
 
-.bio-data-stats{
+#about .skills-stats .bio-data-stats{
 /* background-color: #e2e4ec; */
-border-radius: 0.8rem;
-padding: 1.5rem;
+flex: 1;
 display: flex;
 flex-direction: column;
+justify-content: center;
 gap: 1rem;
 }
-.bio-data-stats h3{
+.bio-data-stats .bio-stats h3{
     margin-top: 1rem;
     font-weight: 300;
     font-size: 1.5rem;
@@ -389,19 +392,51 @@ left: 65%;
 .bio-progress-6>span,.bio-progress-6::after{
     left: 80%;
 }
-.utility-btn {
-    margin-top: 2rem;
+
+#about .skills-stats .utility-btn {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 1.5rem;
+  }
+
+/*-----------techstack i know----------*/
+#tech-stack{
+    display: flex;
+    gap: 2rem; 
+    align-items: center;
+}
+
+.tech-stack-container{
+    flex: 1;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-  }
- 
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
  
 
-
+/*-----------experience and education----------*/
 #experience-and-education{
     background-color: #f9fcff;
     background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);;
+}
+#experience-and-education h2 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #444;
+}
+#experience-and-education h2 > span{
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+#experience-and-education h2 > span >.scrolldownImg{
+    width: 3rem; 
 }
 .experience-title,.education-title{
     padding: 2rem;
@@ -473,24 +508,8 @@ left: 65%;
 
 
 
-#tech-stack{
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr 9fr;
-    /* background-color: #eaf1a3; */
-    
-}
 
-.tech-stack-container{
-    display: flex;
-    align-items: center;
-    justify-content:flex-start;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-#tech-stack h2{
-    margin-bottom: 0;
-}
+
 /*+++++++++++ animated work section start ++++++++++*/
 #work-data{
     background-color: #f9fcff;
