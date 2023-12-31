@@ -9,7 +9,6 @@
     text-decoration: none;
     outline: none;
     border: none;
-    text-transform: capitalize;
     transition: all 0.2s linear;
 }
 
@@ -22,6 +21,8 @@ html{
 body{
     font-family: "Poppins", sans-serif;
     font-style: normal;
+    background-color: #ffffff;
+
 }
 
 a,a:hover, a:active {
@@ -36,20 +37,11 @@ ul {
     margin: 0;
 }
 
-
-h3{
-    font-size: 2.5rem;
-    font-weight: 200;
-    
-}
-h4{
-    font-size: 2rem;
-    font-weight: 200;
-  }
   .btn {
     padding: 1rem 1.5rem;
     /* background-color: #cdbbe0; */
     background-color: #D2E3C8;
+    background-color: #d1ccdc;
    
 
     transition: 0.3s;
@@ -60,8 +52,8 @@ h4{
     gap: 0.5rem;
 }
   .btn:hover{
-    /* background-color: #9988ac; */
-    background-color: #B2C8BA;
+    background-color: #9988ac;
+    /* background-color: #B2C8BA; */
 }
  .btn span {
     font-size: 1.5rem;
@@ -77,33 +69,8 @@ h4{
     
   }
 
-.grid{
-        display: grid;
-        gap: 1rem;
-        justify-content: space-evenly;
-    }
-.grid-two-column{
-        grid-template-columns: repeat(2,1fr);
-}
-
-.grid-four-column{
-        grid-template-columns: repeat(4,1fr);
-        gap: 1rem;
-}
-.grid-two-column-two-row{
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:1fr 1fr
-         
-}
     
 
-/* hr{
-    margin: 0.8rem 0;
-    border: 0.01rem solid gray;
-} */
- /*+++++++++++ Preloader styles ++++++++++*/
- 
 .preloader {
     position: fixed;
     top: 0;
@@ -141,22 +108,28 @@ h4{
     text-align: justify;
     text-transform: none;
 } */
+.highlight{
+    color: #141414;
+  font-weight: 500;
+}
+
 p {
     overflow-wrap: break-word;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
-    color: #444;
-    margin-bottom: 1rem; /* Optional spacing */
+    color: #212529
   }
-/*-----------main----------*/
+
+/*-----------main ✅----------*/
 main {
+    background-color: #ffffff;
     margin: 0 auto;
     height: auto;
     width: 85vw;
     position: relative; /* Add this to make the main element the reference point for positioning */
   }
-  /*-----------header navbar----------*/
+  /*-----------header navbar ✅----------*/
 #header {
     width: 100%;
     height: 8rem;
@@ -167,8 +140,9 @@ main {
     top: 0; /* Stays at the top of the main element */
     z-index: 100; /* Ensure it stays on top of other content */
     background-color: #ffffff;
+
   }
-  /*-----------all sections----------*/
+  /*-----------all sections ✅----------*/
 section{
     margin-top: 2rem; /* Add spacing between sections */
     padding: 8rem 2rem 2rem 2rem;
@@ -176,7 +150,7 @@ section{
     height: auto;
     border-radius: 0.8rem;
  }
-/*-----------inside header----------*/
+/*-----------inside header ✅----------*/
 #header .logo{
     display: flex;
     align-items: center;
@@ -219,10 +193,10 @@ section{
 .mobile-nav-icon[name="close-outline"]{
     display: none;
     border-radius: 50%;
-    background-color: #565fe0;
+    background-color: ;
 } */
 
-/*-----------hero section----------*/
+/*-----------hero section ✅----------*/
  #hero {
     min-height: 75vh;
     overflow: hidden;
@@ -273,7 +247,7 @@ z-index: 1;
 #hero > .text-container  h1 > span{
     color: #97f57a;
 }
-/*-----------all subtitle----------*/
+/*-----------all subtitle ✅----------*/
 h2{
     justify-self: center;
     padding: 2rem 2rem 2rem 0;
@@ -283,29 +257,26 @@ h2{
     margin-bottom: 1rem;
     
   }
-/*-----------about section----------*/
+/*-----------about section ✅----------*/
 
 #about {
-    background-color: #F6F4EB;
+    background-color: #b8b8d1;
     display: flex;
     gap: 2.5rem;
     /* padding-bottom: 1rem; */
 
 }
 #about .about-myself{
-    flex: 0.7;
+    flex: 0.7;;
 }
 #about .skills-stats{
     flex: 0.3;
     display: flex;
     flex-direction: column;
 }
-/* #about .skills-stats{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-} */
-
+#about .about-myself article{
+    padding-right: 1rem;
+}
 
 #about .skills-stats .bio-data-stats{
 /* background-color: #e2e4ec; */
@@ -403,17 +374,24 @@ left: 65%;
 /*-----------techstack i know----------*/
 #tech-stack{
     display: flex;
-    gap: 2rem; 
+    
     align-items: center;
 }
-
-.tech-stack-container{
+#tech-stack h2{
+    margin: 0;
+    border-bottom: 1px dashed gray;
+}
+#tech-stack .tech-stack-container{
+    padding-left: 2rem;
+    padding-top: 2rem;
     flex: 1;
     display: flex;
     align-items: center;
     justify-content:flex-start;
     flex-wrap: wrap;
     gap: 1rem;
+    border-top: 1px dashed grey;
+    border-left: 1px dashed grey;
 }
  
 
@@ -428,11 +406,9 @@ left: 65%;
     border-bottom: 1px dashed #444;
 }
 #experience-and-education h2 > span{
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
-    border-radius: 50%;
-    background-color: #ffffff;
-    padding: 0.5rem;
     cursor: pointer;
 }
 #experience-and-education h2 > span >.scrolldownImg{
@@ -506,37 +482,8 @@ left: 65%;
     border-bottom: 1px solid rgb(182, 182, 182);
 }
 
-
-
-
-
-/*+++++++++++ animated work section start ++++++++++*/
-#work-data{
-    background-color: #f9fcff;
-background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
-    height: auto;
-    padding: 2rem;
-    /* background-color: #cdedfd;
-    background-image: linear-gradient(319deg, #cdedfd 0%, #ffec82 37%, #ffcfd2 100%);  */
-}
-
-#work-data  p{
-    text-align: center;
-    color: #141414;
-}
-.counter-numbers{
-    color: #000000;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-/* portfolio */
+/*-----------PORTFOLO ----------
 #portfolio{
-    display: flex;
-    align-items: center;
-    height: 90vh;
-    position: relative;
-    /* background-color:#BEADFA; */
     background-color: #86A789;
 }
 #portfolio .left{
@@ -559,30 +506,123 @@ background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
     height: 100%;
     object-fit: cover;
 }
+-----------x----------*/
 
 
-/* contact */
+
+
+/*-----------x----------*/
+#projects {
+background-color: #9381ff;
+background-color: #ccc9dc;
+  }
+  
+#projects > .container2  > .project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+  }
+  
+  #projects > .container2  > .project-grid > .project-item {
+    position: relative;
+    overflow: hidden; /* Enable image cropping on hover */
+  }
+  
+  #projects > .container2  > .project-grid > .project-item img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #projects > .container2  > .project-grid > .project-item:hover img {
+    transform: scale(1.1); 
+  }
+  
+  #projects > .container2  > .project-grid > .project-item > .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* not visible */
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  #projects > .container2  > .project-grid > .project-item:hover .project-overlay {
+    /* on hover it visible */
+    opacity: 1;
+  }
+  
+  #projects > .container2  > .project-grid > .project-item > .project-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  #projects > .container2  > .project-grid > .project-item > .project-overlay p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  #projects > .container2  > .project-grid > .project-item > .project-overlay a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff; /* Adjust link color as needed */
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+
+
+/*-----------work section----------*/
+#work-data{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+#work-data div:nth-child(2) {
+    border-left: 1px dashed #000; /* Adjust the color and width as needed */
+    border-right: 1px dashed #000; /* Adjust the color and width as needed */
+  }
+ #work-data  p{
+    text-align: center;
+}
+#work-data .counter-numbers{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: rgb(8, 19, 66);
+}
+
+/*-----------CONTACTS ✅----------*/
 #contact {
+    border: 1px dashed #141414;
     border-radius: 0;
     margin-top: 10rem;
-    background-color: #E9FFC2;
+    background-color: #c19ee0;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     padding: 2rem;
     gap: 3rem;
     
 }
-#contact .box1 h2{
-    width: 50%;
+#contact .container1{
+    flex: 0.3;
 }
-#contact .box1 p{
-    padding-left: 1rem;
+#contact .container2{
+    flex: 0.7;
 }
-.box2{
+
+#contact .container1{
     width: 40rem;
 }
- .box2 > .contact-form form input, .contact-form form textarea{
+#contact .container1 .contact-form form input,#contact .container1 .contact-form form textarea{
     padding: 1rem;
     font-size: 1.8rem;
     height: 5rem;
@@ -592,72 +632,64 @@ background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
     border-bottom: 0.1rem solid black;
     text-transform:none;
 }
-.contact-form form textarea{
+#contact .container1 .contact-form form textarea{
     height: 8rem;
+    resize: none;
 }
 
- .contact-form form input::placeholder,.contact-form form textarea::placeholder{
+#contact .container1 .contact-form form input::placeholder,#contact .container1 .contact-form form textarea::placeholder{
     color: #141414;
     font-size: 1.5rem;
 }
 
-.contact-form form input[type="submit"]{
+#contact .container1 .contact-form form input[type="submit"]{
     border: 0.04rem solid black;
     width: 51%;
     text-align: center;
     margin-top: 2rem;
     font-size: 1.4rem;
-    background-color: #000000;
+    background-color: black;
     color: white;
     cursor: pointer;
 }
- .contact-form form input[type="submit"]:hover{
-    background-color: #141414;
-    
- 
+#contact .container1 .contact-form form input[type="submit"]:hover{
+    background-color: #231942;
+
+}
+
+
+#contact .container2 h2{
+    width: 50%;
 }
 
 
 
+
+
+/*-----------FOOTER ✅----------*/
 #footer{
-    padding: 0 2rem;
-   height: 15rem;
+    height: 15rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid black;
 }
-.left-footer-section p{
-    margin: 0;
-    padding: 0;
-}
-.credits {
+#footer .left-footer-section .credits {
     color: #4b4b4b;
     font-size: 1.5rem;
     text-align: left;
 }
-.credits-name{
-    color: #000000;
-}
 
-
-.social-links ul{
+#footer .right-footer-section .social-links ul{
     display: flex;
     align-items: center;
 }
-
-
-.social-links ul li i{
+#footer .right-footer-section .social-links ul li i{
     font-size: 2rem;
     padding: 1rem;
-    color: #4b4b4b;
     cursor: pointer;
+    color: #212529;
 }
-.social-links ul li i:hover{
-    color: #000000;
-    transform: scale(1.2);
-    
-}
+
 
 
 .scroll_to_top_style{
@@ -677,17 +709,61 @@ background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
 
 
 
- 
-/* ----------------------------------------------
- * Generated by Animista on 2023-7-14 23:40:23
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
 
-/**
- * ----------------------------------------
- * animation focus-in-contract
- * ----------------------------------------
- */
+
+/* Add media query for smaller devices */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 16px; /* Adjust font size for smaller devices */
+  }
+
+  main {
+    width: 95vw; /* Adjust width for smaller devices */
+  }
+
+  #header {
+    height: auto; /* Adjust header height for smaller devices */
+  }
+
+  section {
+    padding: 4rem 2rem; /* Adjust padding for sections on smaller devices */
+  }
+
+  h2 {
+    font-size: 2.5rem; /* Adjust h2 font size for smaller devices */
+  }
+
+  #about .about-myself,
+  #about .skills-stats {
+    flex: 1; /* Adjust flex properties for smaller devices */
+  }
+
+  #about .skills-stats .utility-btn {
+    flex-direction: column; /* Adjust flex direction for smaller devices */
+  }
+
+  #tech-stack .tech-stack-container {
+    flex-direction: column; /* Adjust flex direction for smaller devices */
+  }
+
+  #experience-and-education .container {
+    grid-template-columns: 1fr; /* Adjust grid columns for smaller devices */
+  }
+
+  #projects .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust grid columns for smaller devices */
+    grid-gap: 1rem; /* Adjust grid gap for smaller devices */
+  }
+
+  #work-data {
+    grid-template-columns: repeat(2, 1fr); /* Adjust grid columns for smaller devices */
+  }
+
+  #contact .container1 {
+    grid-template-columns: 1fr; /* Adjust grid columns for smaller devices */
+  }
+}
+
+/* Add rest of your CSS styles below this line */
+
 

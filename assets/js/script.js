@@ -1,170 +1,226 @@
-//!+++++++++++++ preloder +++++++++++++
-// Delay function
 
-function delay(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-// Show the preloader initially
-var preloader = document.querySelector('.preloader');
-preloader.style.display = 'flex'; // Display the preloader
-
-// Delay for 5 seconds
-delay(500).then(function() {
-  // Hide the preloader and display the page content
-  preloader.style.display = 'none';
-  document.body.style.visibility = 'visible'; // Make the page content visible
-});
-
-// Hide the preloader when the page content is loaded
-// window.addEventListener('load', function() {
-//   var preloader = document.querySelector('.preloader');
-//   preloader.style.display = 'none';
-// });
-
-
-
-
-
-//!+++++++++++++ scroll to top functionality +++++++++++++
-
-
-const scroll_to_top_element = document.createElement("div");
-
-scroll_to_top_element.classList.add("scroll_to_top_style");
-
-scroll_to_top_element.innerHTML = `<ion-icon name="arrow-up-circle-outline" class="scroll_to_top_icon"></ion-icon>`;
-
-const footer_element = document.getElementById('footer');
-
-//? The after() method inserts specified content after the selected elements.
-
-footer_element.after(scroll_to_top_element);
-
-window.onscroll=function(){scrollFunction()};
-
-function scrollFunction(){
-  if(document.body.scrollTop>1000|| document.documentElement.scrollTop>1000){
-    scroll_to_top_element.style.display="block";
-  }
-  else{
-    scroll_to_top_element.style.display="none";
-  }
-}
-
-
-
-// When the user clicks on the button, scroll to the top of the document
-scroll_to_top_element.addEventListener("click",()=>{
-  document.nodeType.scrollTop=0;
-  document.documentElement.scrollTop=0;
-});
-
-//!+++++++++++++ animated work section functionality +++++++++++++
-
-
-
-
-
-
-
-
-
-
-
-//!+++++++++++++ sticky header +++++++++++++
-// const hero_section=document.getElementById('hero');
-// const sticky_observer=new IntersectionObserver((entries)=>{
-//   const ent=entries[0];
-//   !ent.isIntersecting?document.body.classList.add("sticky"):document.body.classList.remove('sticky');
-// },
-// {
-//   root:null,
-//   threshold:0,
-// });
-
-// sticky_observer.observe(hero_section);
-
-
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                           header section responcive
-                           remove img div
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-// function removeIntroImg() {
-//     const introImgDiv = document.querySelector('.intro-img');
-//     if (introImgDiv) {
-//       introImgDiv.remove();
-//     }
-//   }
-  
-// function handleWindowResize() {
-//     const screenWidth = window.innerWidth;
-//     if (screenWidth < 576) {
-//       removeIntroImg();
-//     }
-//     else return;
-//   }
-  
-  // Execute on initial load
-  handleWindowResize();
-  
-  // Execute on window resize
-  window.addEventListener('resize', handleWindowResize);
-  
- /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-            RESPONSIVE NAVBAR BOTTON FUNCTIONALITY
-  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--*/
-
-  const mobile_nav_btn = document.querySelector(".mobile-navbar-btn");
-  const navbar=document.querySelector('.navbar')
-  
-
-mobile_nav_btn.addEventListener("click", () => {
-  console.alart("hi");
-  navbar.style.visibility=visible;
-});
-
-
-// animated no section
-function animateNumbers() {
-  const elements = document.getElementsByClassName("counter-number");
-
-  for (let i = 0; i < elements.length; i++) {
-    const startValue = parseInt(elements[i].textContent);
-    const endValue = Math.floor(Math.random() * 100000000); // Set your desired end value here
-    const duration = 3000; // Set the animation duration in milliseconds
-
-    let startTime = null;
-
-    function step(timestamp) {
-      if (!startTime) startTime = timestamp;
-      const progress = timestamp - startTime;
-
-      const currentValue = Math.floor(
-        startValue + ((endValue - startValue) * progress) / duration
-      );
-
-      elements[i].textContent = currentValue.toLocaleString();
-
-      if (progress < duration) {
-        window.requestAnimationFrame(step);
-      } else {
-        elements[i].textContent = endValue.toLocaleString();
-      }
+//RENDER TECHSTACK 
+const tech_stack_data=[
+    {
+        name:"C",
+        img:`<img width="25" height="25" src="https://img.icons8.com/ios/50/c.png" alt="c"/>`
+    },
+    {
+        name:"C++",
+        img:`<img width="25" height="25" src="https://img.icons8.com/color/48/c-plus-plus-logo.png" alt="c-plus-plus-logo"/>`
+    },
+    {
+        name:"HTML",
+        img:`<img width="25" height="25" src="https://img.icons8.com/color/48/html-5--v2.png" alt="html-5--v2"/>`
+    },
+    {
+        name:"CSS",
+        img:`<img width="25" height="25" src="https://img.icons8.com/fluency/48/css3.png" alt="css3"/>`
+    },
+    {
+        name:"JavaScript (ES6+)",
+        img:`<img width="25" height="25" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/>`
+    },
+    {
+        name:"React",
+        img:`<img width="25" height="25" src="https://img.icons8.com/office/20/react.png" alt="react"/>`
+    },
+    {
+        name:"Bootstrap",
+        img:`<img width="25" height="25" src="https://img.icons8.com/color-glass/20/bootstrap.png" alt="bootstrap"/>`
+    },
+    {
+        name:"Git",
+        img:`<img width="25" height="25" src="https://img.icons8.com/color/48/git.png" alt="git"/>`
+    },
+    {
+        name:"GitHub",
+        img:`<img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/20/external-github-with-cat-logo-an-online-community-for-software-development-logo-bold-tal-revivo.png" alt="external-github-with-cat-logo-an-online-community-for-software-development-logo-bold-tal-revivo"/>`
+    },
+    {
+        name:"PostgreSQL",
+        img:`<img width="25" height="25" src="https://img.icons8.com/color/48/postgreesql.png" alt="postgreesql"/>`
+    },
+    {
+        name:"Visual Stdio",
+        img:`<img width="25" height="25" src="https://img.icons8.com/color/48/000000/visual-studio--v1.png" alt="visual-studio--v1"/>`
+    },
+    {
+        name:"Markdown",
+        img:`<img width="25" height="25" src="https://img.icons8.com/color/48/markdown.png" alt="markdown"/>`
     }
 
-    window.requestAnimationFrame(step);
+    
+    
+
+]
+const tech_stack_container=document.querySelector(".tech-stack-container");
+
+let all_tech_element="";
+
+tech_stack_data.forEach((data)=>{
+//   console.log(data);
+    all_tech_element+=`<div  class="btn"><span>${data.name}</span>
+    ${data.img}
+  </div>`
+});
+
+tech_stack_container.innerHTML=all_tech_element;
+
+
+//RENDER ALL EDUCATIONAL AND EXPERIENCE DATA
+const experience_data=[
+    {
+        date:"may 2023 - june 2023",
+        job_role:"Web Development and Designing intern",
+        company:"[Oasis Infobyte] - Remote",
+        description:`Developed some mini    responsive web application using HTML, CSS, and JavaScript.
+        Gained knowledge of frontend responsive web design.`
+    },
+    {
+        date:"may 2023 - june 2023",
+        job_role:"Web Development intern",
+        company:"[InternPe] - Remote",
+        description:`Gained knowledge of frontend responsive web design.
+        Responsible for building some responsive webpages.`
+    }
+]
+const education_data=[
+    {
+        date:"january 2023 - present",
+        institution:"FreeCodeCamp udemy & coursera",
+        description:`Take  a bunch of Courses.
+        On web development, javascript, php and pogramming languages.Continiously upskilling myself with latest technologies.`
+    },
+    {
+        date:"2020 - present",
+        institution:"MCKV Institute of Engineering, Liluah [B.Tech]",
+        description:`University - Maulana Abul Kalam Azad
+        University of Technology
+        <br>currently in 7th semester.
+        <br>Stream - Electrical Engineering | CGPA - 8.8/10`
+    },
+    {
+        date:"2019 complited",
+        institution:`garalgacha high school, Chanditala 
+        <br>
+        (Primary and higher secondary education)`,
+        description:`Higher secondary exam (WBCHSE board) | Score - 73% | Stream - Science
+        <br>
+       higher secondary exam (WBBSE board) | Score - 77.85%`
+    }
+]
+
+function render_experience_and_education_data(){
+
+    //select ul element
+    const experience_list=document.getElementById('experience-list');
+    
+    experience_data.forEach(data=>{
+        
+        //for each data create list item
+        const list_item=document.createElement('li');
+        list_item.innerHTML=`<div class="timeline-content">
+                                <h4 class="date">${data.date}</h4>
+        
+                                <h3>${data.job_role}<br>
+                                    ${data.company}</h3>
+        
+                                <p>
+                                    <i class="fa-solid fa-bullseye" style="color: #4b65ce;"></i> ${data.description}
+                                </p>
+                            </div>`;
+
+        
+        //append each list item to ul
+        experience_list.appendChild(list_item);
+        
+    });
+
+    const education_list=document.getElementById('education-list');
+
+    education_data.forEach(data=>{
+        const list_item=document.createElement('li');
+        list_item.innerHTML=`<div class="timeline-content">
+                                <h4 class="date">${data.date}</h4>
+        
+                                <h3>${data.institution}</h3>
+       
+                                <p><i class="fa-solid fa-bullseye" style="color: #4b65ce;"></i>
+                                ${data.description}
+                                </p>
+        
+                            </div>`;
+
+        education_list.appendChild(list_item);
+    });
+
+}
+render_experience_and_education_data();
+
+
+//RENDER WORK DATA
+
+const workData = [
+    { number: 1000, label: "Hours of Code" },
+    { number: 10, label: "Self Projects" },
+    { number: 2, label: "Internships" }
+  ];
+  
+  // Get the container element
+  const workDataContainer = document.getElementById("work-data");
+  
+  // Create and append elements dynamically
+  workData.forEach(item => {
+    const div = document.createElement("div");
+  
+    
+    
+    const counterNumbers = document.createElement("p");
+
+    counterNumbers.classList.add("counter-numbers");
+    counterNumbers.textContent = 0; // Set the initial value to 0
+  
+    const label = document.createElement("p");
+    label.classList.add("counter-label")
+    label.textContent = item.label;
+  
+    div.appendChild(counterNumbers);
+    div.appendChild(label);
+  
+    workDataContainer.appendChild(div);
+  
+    // Set up the Intersection Observer
+    const observerObj = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        //entry is aobject 
+        //isIntersecting is aentry obj property which is true
+        if (entry.isIntersecting) {
+          // Start counting animation when the section is in view
+        //   console.log(entry);
+          animateCounter(counterNumbers, item.number);
+        //   target is aproperty of entry which is div
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+  
+    // Observe each dynamically created div
+    observerObj.observe(div);
+  });
+  
+  // Function to animate the counter
+  function animateCounter(element, targetValue) {
+    let currentValue = 0;
+  
+    const interval = setInterval(() => {
+      if (currentValue < targetValue) {
+        currentValue += Math.ceil(targetValue / 20);
+        element.textContent = currentValue;
+      } else {
+        element.textContent = targetValue;
+        clearInterval(interval);
+      }
+    }, 100);
   }
-}
-
-animateNumbers();
-
-///-----------------
-function mouseOver(){
-  document.getElementsByClassName('skills').classList.add('flip-horizontal-bottom');
-}
-function mouseOut(){
-  document.getElementsByClassName('skills').classList.remove('flip-horizontal-bottom');
-}
-
-// ------------bio data stats rendering
+  
