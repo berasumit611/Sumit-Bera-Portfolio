@@ -7,9 +7,12 @@
     box-sizing: border-box;
     vertical-align: baseline;
     text-decoration: none;
+    text-align: justify;
+
     outline: none;
     border: none;
     transition: all 0.2s linear;
+    
 }
 
 html{
@@ -37,40 +40,47 @@ ul {
     margin: 0;
 }
 
-  .btn {
-    padding: 1rem 1.5rem;
-    /* background-color: #cdbbe0; */
-    background-color: #D2E3C8;
-    background-color: #d1ccdc;
-   
+p {
+    overflow-wrap: break-word;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #212529;
+  }
 
-    transition: 0.3s;
+
+/*-----------button----------*/
+.btn {
+    padding: 1rem 1.5rem;
+    background-color: #d1ccdc;
     color: #141414;
     border-radius: 0.4rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    transition: 0.3s;
+
 }
-  .btn:hover{
+.btn:hover{
     background-color: #9988ac;
-    /* background-color: #B2C8BA; */
+
 }
- .btn span {
+.btn span {
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
   }
- .btn i ,.btn img{
+.btn i ,.btn img{
     margin-left: 0.3rem;
     font-size: 1.2rem;
     transition: 0.3s;
-  }
+}
    .btn:hover i ,.btn:hover img{
     transform: translateX(0.5rem);
     
-  }
+}
 
     
-
+/*-----------preloder----------*/
 .preloader {
     position: fixed;
     top: 0;
@@ -82,44 +92,28 @@ ul {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-  }
+}
   
-  .preloader-spinner {
+.preloader-spinner {
     width: 40px;
     height: 40px;
     border: 4px solid #f3f3f3;
     border-top: 4px solid #3498db;
     border-radius: 50%;
     animation: spin 1s linear infinite;
-  }
+}
   
-  /* Preloader animation */
-  @keyframes spin {
+/* Preloader animation */
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
+}
 
- 
- 
-/* p{
-    color: #5b5b5b;
-    line-height: 1.6;
-    font-size: 1.5rem;
-    text-align: justify;
-    text-transform: none;
-} */
+
 .highlight{
     color: #141414;
   font-weight: 500;
 }
-
-p {
-    overflow-wrap: break-word;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    color: #212529
-  }
 
 /*-----------main ✅----------*/
 main {
@@ -128,8 +122,16 @@ main {
     height: auto;
     width: 85vw;
     position: relative; /* Add this to make the main element the reference point for positioning */
-  }
-  /*-----------header navbar ✅----------*/
+}
+/*-----------all sections ✅----------*/
+section{
+    margin-top: 2rem; /* Add spacing between sections */
+    padding: 8rem 2rem 2rem 2rem;
+    width: 100%;
+    height: auto;
+    border-radius: 0.8rem;
+ }
+/*-----------header navbar ✅----------*/
 #header {
     width: 100%;
     height: 8rem;
@@ -141,15 +143,7 @@ main {
     z-index: 100; /* Ensure it stays on top of other content */
     background-color: #ffffff;
 
-  }
-  /*-----------all sections ✅----------*/
-section{
-    margin-top: 2rem; /* Add spacing between sections */
-    padding: 8rem 2rem 2rem 2rem;
-    width: 100%;
-    height: auto;
-    border-radius: 0.8rem;
- }
+}
 /*-----------inside header ✅----------*/
 #header .logo{
     display: flex;
@@ -171,9 +165,11 @@ section{
     align-items: center;
     gap: 2.5rem;
     font-size: 1.5rem;
+
+
 }
 #header > .nav-left   > nav > .navbar-links a:hover{
-    color: #7B68EE;
+    text-transform: uppercase;
 }
 
 /* ? bydefault icon not visible */
@@ -197,18 +193,18 @@ section{
 } */
 
 /*-----------hero section ✅----------*/
- #hero {
+#hero {
     min-height: 75vh;
     overflow: hidden;
     position: relative;
 }
 #hero > .img-container{
-    position: absolute;
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;/* Ensure image is behind overlay */
+    object-fit: cover;
 }
 #hero .img-container img{
     width:100%;
@@ -216,24 +212,21 @@ section{
     object-fit: cover;
 }
 #hero > .overlay{
-    background-color: rgba(0, 0, 0, 0.911); 
-    /* Add a semi-transparent black background */
-    /* Ensure overlay covers the entire section */
     position: absolute;
     top: 0;
     left: 0;
-    
     width: 100%;
     height: 100%;
+ background-color: rgba(0, 0, 0, 0.89);
 }
 #hero > .text-container{
 position: absolute;
 top: 50%;
 left: 50%;
 left: 0; 
-/* perfectly y axis wise center */
-transform: translateY(-50%);
-z-index: 1;
+/* adjust y axis  */
+transform: translateY(0%);
+
 }
 #hero > .text-container  h1{
     width: 60%;
@@ -267,16 +260,18 @@ h2{
 
 }
 #about .about-myself{
-    flex: 0.7;;
+    flex: 0.8;;
+    background-color: #a6a6bc;
+    border-radius: 0.8rem;
+    padding: 1rem;
+
 }
 #about .skills-stats{
     flex: 0.3;
     display: flex;
     flex-direction: column;
 }
-#about .about-myself article{
-    padding-right: 1rem;
-}
+
 
 #about .skills-stats .bio-data-stats{
 /* background-color: #e2e4ec; */
@@ -305,13 +300,13 @@ position: relative;
     top: 1rem;
     background: transparent;
 }
-
+/*-----------first----------*/
 .bio-progress-bar::before{
 content: "";
 position: absolute;
 top: 0;
 left: 0;
-width: 80%;
+width: 70%;
 height:inherit; 
 background: #030322;
 border-radius: 10rem;
@@ -327,42 +322,31 @@ border: 0.2rem solid #030522;
 border-radius: 50%;
 background-color: transparent;
 }
-
+/*-----------other----------*/
 .bio-progress-2::before{
-width: 70%;
+width: 60%;
 }
 .bio-progress-3::before{
-width: 85%;
+width: 50%;
 }
 .bio-progress-4::before{
-width: 80%;
-}
-.bio-progress-5::before{
-width: 65%;
-}
-.bio-progress-6::before{
-    width: 80%;
+    width: 70%;
 }
 
 
 .bio-progress-bar>span,.bio-progress-bar::after{
-left: 80%;
+left: 70%;
 }
 .bio-progress-2>span,.bio-progress-2::after{
-left:70%;
+left:60%;
 }
 .bio-progress-3>span,.bio-progress-3::after{
-left: 85%;
+left: 50%;
 }
 .bio-progress-4>span,.bio-progress-4::after{
-left: 80%;
+    left:70%;
 }
-.bio-progress-5>span,.bio-progress-5::after{
-left: 65%;
-}
-.bio-progress-6>span,.bio-progress-6::after{
-    left: 80%;
-}
+
 
 #about .skills-stats .utility-btn {
    display: flex;
@@ -411,12 +395,16 @@ left: 65%;
     align-items: center;
     cursor: pointer;
 }
-#experience-and-education h2 > span >.scrolldownImg{
-    width: 3rem; 
-}
+
 .experience-title,.education-title{
     padding: 2rem;
+    
 }
+.experience-title h3,.education-title h3{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
 #experience-and-education .container{
     height: 80vh;
     display: grid;
@@ -438,9 +426,9 @@ left: 65%;
     content: '';
     position: absolute;
     height: 100%;
-    width: 0.015rem;
-    background-color: gray;
+    width: 0;
     left: -4rem;
+    border-left: 1px dashed rgb(0, 0, 0);
 }
 .timeline ul{
     position: absolute;
@@ -482,103 +470,100 @@ left: 65%;
     border-bottom: 1px solid rgb(182, 182, 182);
 }
 
-/*-----------PORTFOLO ----------
-#portfolio{
-    background-color: #86A789;
+/*-----------portfolio----------*/
+#projects{
+    background-color: #a4b5be77;
 }
-#portfolio .left{
-    width: 25%;
-    height: 100%;
+#projects h2{
+    border-bottom: 1px dashed #141414;
+
+}
+.project-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+
 }
-#portfolio .btn{
-    border-radius: 0.8rem 0 0 0.8rem;
+.project-container .project-item{
+    display: flex;
+    gap: 2rem;
+    
 }
-#portfolio .right{
-    position: relative;
-    left: 10%;
+
+.project-container .project-item .project-left-part{
+    width: 60%;
+    height: 60vh;
     overflow: hidden;
+    position: relative;
+    border-radius: 0.4rem;
 }
-#portfolio .right img{
-    border-radius:0.8rem;
+.project-container .project-item .project-right-part{
+    width: 40%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    background-color: #c0c6cb;
+    border-radius: 0.4rem;
+    padding: 1.5rem;
+}
+.project-container .project-item .project-left-part img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
------------x----------*/
-
-
-
-
-/*-----------x----------*/
-#projects {
-background-color: #9381ff;
-background-color: #ccc9dc;
-  }
-  
-#projects > .container2  > .project-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
-  }
-  
-  #projects > .container2  > .project-grid > .project-item {
-    position: relative;
-    overflow: hidden; /* Enable image cropping on hover */
-  }
-  
-  #projects > .container2  > .project-grid > .project-item img {
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  #projects > .container2  > .project-grid > .project-item:hover img {
-    transform: scale(1.1); 
-  }
-  
-  #projects > .container2  > .project-grid > .project-item > .project-overlay {
+.project-container .project-item .project-left-part .project-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* not visible */
-    opacity: 0; 
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+   
     transition: opacity 0.3s ease-in-out;
-  }
-  
-  #projects > .container2  > .project-grid > .project-item:hover .project-overlay {
-    /* on hover it visible */
-    opacity: 1;
-  }
-  
-  #projects > .container2  > .project-grid > .project-item > .project-overlay h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  #projects > .container2  > .project-grid > .project-item > .project-overlay p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  #projects > .container2  > .project-grid > .project-item > .project-overlay a {
-    text-decoration: none;
-    color: #fff;
-    background-color: #007bff; /* Adjust link color as needed */
-    padding: 10px 20px;
-    border-radius: 5px;
-  }
-  
+} 
+
+.project-right-part .project-title{
+    font-size: 3.5rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.project-right-part .project-title span{
+    display: flex;
+    align-items: center;
+}
+.project-right-part .project-tech{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+.project-right-part .project-tech span{
+    padding: 0.5rem;
+}
+
+.html{
+    border: 1px solid green;
+}
+.css{
+    border: 1px solid rgb(211, 128, 20);
+}
+.bootstrap{
+    border: 1px solid rgb(8, 47, 105);
+}
+.javascript{
+    border: 1px solid rgb(211, 214, 15);
+}
+.php{
+    border: 1px solid rgb(84, 173, 231);
+}
+.jquery{
+    border: 1px solid red;
+}
+
 
 
 /*-----------work section----------*/
@@ -602,8 +587,8 @@ background-color: #ccc9dc;
 
 /*-----------CONTACTS ✅----------*/
 #contact {
-    border: 1px dashed #141414;
-    border-radius: 0;
+    
+   
     margin-top: 10rem;
     background-color: #c19ee0;
     display: flex;
