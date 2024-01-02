@@ -227,4 +227,13 @@ const workData = [
       }
     }, 100);
   }
-  
+
+  //scroll to top
+  const scrollDiv = document.getElementById("scroll-to-top");
+scrollDiv.addEventListener("click", function() {
+    // Scroll to the top smoothly
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+});

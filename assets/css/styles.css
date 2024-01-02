@@ -172,6 +172,16 @@ section{
     text-transform: uppercase;
 }
 
+#header .nav-right{
+    display: flex;
+    align-items: center;
+}
+.nav-right .menu{
+    display: flex;
+    align-items: center;
+    font-size: 3.5rem;
+    display: none;
+}
 /* ? bydefault icon not visible */
 /* .mobile-navbar-btn{
     display: none;
@@ -691,64 +701,14 @@ left: 50%;
    color: #141414;
     font-size: 3.5rem;
 }
+#scroll-to-top{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
 
-
-
-
-
-/* Add media query for smaller devices */
-@media only screen and (max-width: 600px) {
-  body {
-    font-size: 16px; /* Adjust font size for smaller devices */
-  }
-
-  main {
-    width: 95vw; /* Adjust width for smaller devices */
-  }
-
-  #header {
-    height: auto; /* Adjust header height for smaller devices */
-  }
-
-  section {
-    padding: 4rem 2rem; /* Adjust padding for sections on smaller devices */
-  }
-
-  h2 {
-    font-size: 2.5rem; /* Adjust h2 font size for smaller devices */
-  }
-
-  #about .about-myself,
-  #about .skills-stats {
-    flex: 1; /* Adjust flex properties for smaller devices */
-  }
-
-  #about .skills-stats .utility-btn {
-    flex-direction: column; /* Adjust flex direction for smaller devices */
-  }
-
-  #tech-stack .tech-stack-container {
-    flex-direction: column; /* Adjust flex direction for smaller devices */
-  }
-
-  #experience-and-education .container {
-    grid-template-columns: 1fr; /* Adjust grid columns for smaller devices */
-  }
-
-  #projects .project-grid {
-    grid-template-columns: repeat(2, 1fr); /* Adjust grid columns for smaller devices */
-    grid-gap: 1rem; /* Adjust grid gap for smaller devices */
-  }
-
-  #work-data {
-    grid-template-columns: repeat(2, 1fr); /* Adjust grid columns for smaller devices */
-  }
-
-  #contact .container1 {
-    grid-template-columns: 1fr; /* Adjust grid columns for smaller devices */
-  }
+   
 }
 
-/* Add rest of your CSS styles below this line */
 
 
