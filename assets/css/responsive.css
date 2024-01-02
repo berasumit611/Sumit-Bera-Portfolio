@@ -1,0 +1,58 @@
+/* Add media query for smaller devices */
+@media only screen and (max-width: 400px) {
+  
+    main {
+    width: 98vw;
+    height: 100%;
+
+    }
+  
+    
+  #header .nav-left{
+    display: none;
+  }
+    section {
+      padding: 4rem 2rem; /* Adjust padding for sections on smaller devices */
+    }
+  
+    h2 {
+      font-size: 2.5rem; /* Adjust h2 font size for smaller devices */
+    }
+  #about{
+    flex-direction: column;
+  }
+    #about .about-myself,
+    #about .skills-stats {
+      flex: 1; /* Adjust flex properties for smaller devices */
+    }
+  #tech-stack{
+    flex-direction: column;
+  }
+   
+    #experience-and-education .container {
+      grid-template-columns: 1fr; /* Adjust grid columns for smaller devices */
+    }
+    .project-container .project-item{
+        flex-direction: column-reverse;
+    }
+    .project-container .project-item .project-left-part,.project-container .project-item .project-right-part{
+        width: 100%;
+        height: auto;
+    }
+  
+    #work-data {
+      grid-template-columns: 1fr; /* Adjust grid columns for smaller devices */
+    }
+  #contact{
+    flex-direction: column;
+  }
+ #contact .container1,#contact .container2{
+    width: 100%;
+ }
+ #contact .container2 h2{
+    width: 100%;
+ }
+ #footer{
+    flex-direction: column;
+ }
+  }
