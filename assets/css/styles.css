@@ -1,9 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-
 *,*::after,*::before{
     padding: 0;
     margin: 0;
@@ -11,6 +8,7 @@
     vertical-align: baseline;
     text-decoration: none;
     text-align: justify;
+
     outline: none;
     border: none;
     transition: all 0.2s linear;
@@ -26,6 +24,8 @@ html{
 body{
     font-family: "Poppins", sans-serif;
     font-style: normal;
+    background-color: #ffffff;
+
 }
 
 a,a:hover, a:active {
@@ -45,20 +45,25 @@ p {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
-    color: #141414;
+    color: #212529;
   }
 
 
 /*-----------button----------*/
 .btn {
-    padding: 0.5rem 1rem;
-    color: #000000;
+    padding: 1rem 1.5rem;
+    background-color: #d1ccdc;
+    color: #141414;
+    border-radius: 0.4rem;
     display: flex;
     align-items: center;
-    border: 1px solid rgb(0, 0, 0);
     gap: 0.5rem;
     transition: 0.3s;
-    background-color: #97f57a2d;
+
+}
+.btn:hover{
+    background-color: #9988ac;
+
 }
 .btn span {
     font-size: 1.5rem;
@@ -69,13 +74,50 @@ p {
     font-size: 1.2rem;
     transition: 0.3s;
 }
-.btn:hover i ,.btn:hover img{
+   .btn:hover i ,.btn:hover img{
     transform: translateX(0.5rem);
     
 }
 
+    
+/*-----------preloder----------*/
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+  
+.preloader-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+  
+/* Preloader animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.highlight{
+    color: #141414;
+  font-weight: 500;
+}
+
 /*-----------main ✅----------*/
 main {
+    background-color: #ffffff;
     margin: 0 auto;
     height: auto;
     width: 85vw;
@@ -99,12 +141,10 @@ section{
     position: sticky; /* Use sticky for relative positioning within main */
     top: 0; /* Stays at the top of the main element */
     z-index: 100; /* Ensure it stays on top of other content */
-    background: rgba(255,255,255,0.7);
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
-
+    background-color: #ffffff;
 
 }
+/*-----------inside header ✅----------*/
 #header .logo{
     display: flex;
     align-items: center;
@@ -125,6 +165,8 @@ section{
     align-items: center;
     gap: 2.5rem;
     font-size: 1.5rem;
+
+
 }
 #header > .nav-left   > nav > .navbar-links a:hover{
     text-transform: uppercase;
@@ -140,6 +182,25 @@ section{
     font-size: 3.5rem;
     display: none;
 }
+/* ? bydefault icon not visible */
+/* .mobile-navbar-btn{
+    display: none;
+    background-color: transparent;
+    cursor: pointer;
+    border:none;
+    position: relative;
+     
+}
+.mobile-nav-icon{
+    width: 4em;
+    height: 4em;
+    color: black;
+}
+.mobile-nav-icon[name="close-outline"]{
+    display: none;
+    border-radius: 50%;
+    background-color: ;
+} */
 
 /*-----------hero section ✅----------*/
 #hero {
@@ -182,7 +243,7 @@ transform: translateY(0%);
     font-weight: 500;
     line-height: 6rem;
     font-size: 4.5rem;
-    color: #141414;
+    color: whitesmoke;
     text-align:left;
     padding: 2rem;
 }
@@ -197,18 +258,23 @@ h2{
     line-height: 4rem;
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    color: #7743DB;
-    color: #141414;
+    
   }
 /*-----------about section ✅----------*/
 
 #about {
-    background-color: #F1F1F6;
+    background-color: #b8b8d1;
     display: flex;
-    gap: 5rem;
+    gap: 2.5rem;
+    /* padding-bottom: 1rem; */
+
 }
 #about .about-myself{
-    flex: 0.8;
+    flex: 0.8;;
+    background-color: #a6a6bc;
+    border-radius: 0.8rem;
+    padding: 1rem;
+
 }
 #about .skills-stats{
     flex: 0.3;
@@ -301,28 +367,32 @@ left: 50%;
 
 /*-----------techstack i know----------*/
 #tech-stack{
-    background-color: #F5F7F8;
     display: flex;
+    
     align-items: center;
-    gap: 1rem;
+}
+#tech-stack h2{
+    margin: 0;
+    border-bottom: 1px dashed gray;
 }
 #tech-stack .tech-stack-container{
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
     flex: 1;
     display: flex;
     align-items: center;
     justify-content:flex-start;
     flex-wrap: wrap;
     gap: 1rem;
+    border-top: 1px dashed grey;
+    border-left: 1px dashed grey;
 }
  
 
 /*-----------experience and education----------*/
 #experience-and-education{
-    /* background-color: #f9fcff;
-    background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%); */
-
-    background-color: #E8FFCE;
+    background-color: #f9fcff;
+    background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);;
 }
 #experience-and-education h2 {
     display: flex;
@@ -412,8 +482,7 @@ left: 50%;
 
 /*-----------portfolio----------*/
 #projects{
-    background-color: #F2F1EB;
-    background-color: #EEF5FF;
+    background-color: #a4b5be77;
 }
 #projects h2{
     border-bottom: 1px dashed #141414;
@@ -446,7 +515,6 @@ left: 50%;
     justify-content: flex-end;
     gap: 1.5rem;
     background-color: #c0c6cb;
-    background-color: #864AF9;
     border-radius: 0.4rem;
     padding: 1.5rem;
 }

@@ -63,10 +63,8 @@ const tech_stack_container=document.querySelector(".tech-stack-container");
 let all_tech_element="";
 
 tech_stack_data.forEach((data)=>{
-    // Generate a random color in hex format
-    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
 //   console.log(data);
-    all_tech_element+=`<div  class="btn" style="border: 1px solid ${randomColor};"><span>${data.name}</span>
+    all_tech_element+=`<div  class="btn"><span>${data.name}</span>
     ${data.img}
   </div>`
 });
