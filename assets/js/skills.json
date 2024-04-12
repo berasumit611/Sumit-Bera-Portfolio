@@ -1,0 +1,51 @@
+{
+  "frontend": [
+    {
+      "language": "HTML",
+      "image": "https://img.icons8.com/color/48/html-5--v2.png"
+    },
+    {
+      "language": "CSS",
+      "image": "https://img.icons8.com/fluency/48/css3.png"
+    },
+    {
+      "language": "JavaScript (ES6+)",
+      "image": "https://img.icons8.com/color/48/javascript--v1.png"
+    },
+    {
+      "language": "Bootstrap",
+      "image": "https://img.icons8.com/color-glass/20/bootstrap.png"
+    }
+  ],
+  "backend": [
+    {
+      "language": "PHP",
+      "image": "https://img.icons8.com/ios/25/php-logo.png"
+    }
+  ],
+  "database": [
+    {
+      "language": "Oracle SQL (11g)",
+      "image": "https://img.icons8.com/color/48/oracle-logo.png"
+    },
+    {
+      "language": "PostgreSQL",
+      "image": "https://img.icons8.com/plasticine/100/postgreesql.png"
+    }
+  ],
+  "others": [
+    {
+      "language": "Git",
+      "image": "https://img.icons8.com/color/48/git.png"
+    },
+    {
+      "language": "GitHub",
+      "image": "https://img.icons8.com/ios-glyphs/60/github.png"
+    },
+    {
+      "language": "Netlify",
+      "image": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-color-tal-revivo.png"
+    }
+    
+  ]
+}

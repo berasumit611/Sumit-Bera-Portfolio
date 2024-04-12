@@ -22,6 +22,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- unicon -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/thinline.css">
    
     <!------- JS FILE ------->
     
@@ -35,62 +37,57 @@
 
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
 
-    <title>Sumit Bera Portfolio</title>
+    <title>Portfolio</title>
   </head>
 
   <body  >
-    <!-- header -->
-    <header>
-      <div class="nav-left">
-        <div class="logo ">
-          <a href="#" title="Home">Sb</a>
-        </div>
-
-        <nav class="navbar">
-          <ul class="navbar-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="https://drive.google.com/file/d/1oYTgAtQUyTmKB5N9beXOp4sg-jOXrwjI/view?usp=sharing" target="_blank">Resume</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="nav-right">
-          <a
-          href="https://github.com/berasumit611"
-          target="_blank"
-          class="btn"
-          ><span>hire me</span>
-          <img width="35" height="35" src="https://img.icons8.com/ios/35/000000/right--v1.png" alt="right--v1"/>
-        </a>
-        <div class="menu">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-      </div>
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <nav class="navbar">
         
-      
-    </header>
+            <ul class="navbar__items">
+              <li><a href="#" class="logo" title="Home">Sb</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Portfolio</a></li>
+              <li><a href="#" target="_blank">Resume</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
 
+            <div class="navbar__links">
+              <a href="#" target="_blank" >
+                <span>Hire me</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+         
+      </nav>
+    </header>
+    
+
+    
+    <!-- <a href="./Js-projects/js-projects.html">hi begfegw</a> -->
     <!-- main -->
+    
+    
+    <!-- MAIN -->
     <main>
      
 
-      <!-- hero ✅-->
+      <!-- hero -->
       <section id="hero">
   
-            <div class="img-container">
-              <img src="https://images.unsplash.com/photo-1433321768402-897b0324c?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="hero image">
+            <div class="img__container">
+              <img src="https://images.unsplash.com/photo-1517495306984-f84210f9daa8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
               
             </div>
 
-            <!-- <div class="overlay"></div> -->
+          
 
-            <div class="text-container">
+            <div class="text__container">
               <h1 >
-                <span>Hola!</span> I Am Sumit. Passionate frontend web developer
-                and designer.
+                Hellooo
               </h1>
-
             </div>
 
       </section>
@@ -174,16 +171,41 @@
         
       </section>
   
-      <!-- tech stack and tool ✅-->
-      <section id="tech-stack">
-        <h2>Techstack<br> I know</h2>
-        <div class="tech-stack-container">
-          <!-- <div  class="btn"><span>JavaScript</span>
-            <img width="20" height="20" src="https://img.icons8.com/office/16/react.png" alt="react"/>
-          </div> -->
-        
+      <!-- techstack -->
+      <section id="skills">
+        <h2>Techstack I know</h2>
+        <div class="tech__stack__container">
+            <div class="frontend">
+              <h3>Frontend</h3>
+              <div class="frontend_skills">
+                <!-- <div class="skill_div">
+                  <span>${skill.language}</span>
+                  <img width="25" height="25" src="${skill.image}" alt="markdown"/>
+                </div> -->
+
+              </div>
+            </div>
+            <div class="backend">
+              <h3>Backend</h3>
+              <div class="backend_skills">
+
+                </div>
+            </div>
+            <div class="database">
+              <h3>Database</h3>
+              <div class="database_skills">
+
+                </div>
+            </div>
+            <div class="others">
+              <h3>Others</h3>
+              <div class="others_skills">
+                
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
+      
 
       <!-- career ✅-->
       <section id="experience-and-education"
@@ -441,6 +463,6 @@
     <!-- icon8 cdn -->
     <a href="https://icons8.com"></a>
 
-
+<script src="test2.js"></script>
   </body>
 </html>

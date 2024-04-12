@@ -1,0 +1,16 @@
+.hero {
+
+  
+  display: flex;
+  align-items: center;
+}
+h1 {
+  border-bottom-right-radius: 25px;
+  background-color: rgba(137, 43, 226, 0.274);
+  font-weight: 300;
+  line-height: 10rem;
+  font-size: 8rem;
+  padding: 6rem 2rem;
+  margin: 2rem 0;
+  text-align: left;
+}
