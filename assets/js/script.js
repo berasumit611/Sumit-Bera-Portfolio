@@ -1,4 +1,4 @@
-//render skills
+//1> render skills
 // Fetch the skills.json file
 fetch('assets/js/skills.json')
   .then(response => response.json())
@@ -57,10 +57,33 @@ fetch('assets/js/skills.json')
   })
   .catch(error => console.error('Error fetching skills.json:', error));
 
+//2> render social__links
+const social__links_obj=[
+  
+  {
+    name:"GitHub",
+    img:"https://img.icons8.com/ios-glyphs/60/github.png"
+  },
+  {
+    name:"HackerRank",
+    img:"https://img.icons8.com/windows/32/hackerrank.png"
+  },
+  {
+    name:"Linkedin",
+    img:"https://img.icons8.com/ios-glyphs/60/linkedin.png"
+  }
 
-
-
-
+]
+const social__links_ul=document.querySelector('.social__links');//select social__links ul element
+let all_social__links="";
+social__links_obj.forEach((data)=>{
+  all_social__links+=
+  `<div class="skill_div">
+      <span>${data.name}</span>
+      <img width="25" height="25" src="${data.img}" alt="markdown"/>
+</div>`
+});
+social__links_ul.innerHTML=all_social__links;
 
 
 
