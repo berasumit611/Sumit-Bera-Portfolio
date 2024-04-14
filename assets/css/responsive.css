@@ -1,58 +1,161 @@
-/* Add media query for smaller devices */
-@media only screen and (max-width: 400px) {
-  
-    main {
-    width: 98vw;
-    height: 100%;
-
-    }
-  
-    
-  #header .nav-left{
-    display: none;
-  }
-    section {
-      padding: 4rem 2rem; /* Adjust padding for sections on smaller devices */
-    }
-  
-    h2 {
-      font-size: 2.5rem; /* Adjust h2 font size for smaller devices */
-    }
-  #about{
-    flex-direction: column;
-  }
-    #about .about-myself,
-    #about .skills-stats {
-      flex: 1; /* Adjust flex properties for smaller devices */
-    }
-  #tech-stack{
-    flex-direction: column;
-  }
-   
-    #experience-and-education .container {
-      grid-template-columns: 1fr; /* Adjust grid columns for smaller devices */
-    }
-    .project-container .project-item{
-        flex-direction: column-reverse;
-    }
-    .project-container .project-item .project-left-part,.project-container .project-item .project-right-part{
+/* small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    /* header */
+    #header {
         width: 100%;
         height: auto;
-    }
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;}
+        
+  /* main */
+main {
+    padding: 0;
+  }
+  /* each section */
+  section {
+    width: 100%;
+    padding: 8rem 2rem 2rem;
+    border-radius: 0.8rem;
+    margin-bottom: 2rem;
+  }  
+
+/* hero */
+#hero {
+    width: 100%;
+    height: auto;
+  }
+  #hero > .img__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #hero .img__container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  }
+  /* #hero > .overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+   background-color: rgba(0, 0, 0, 0.89);
+  } */
+  #hero > .text__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #hero > .text__container h1 {
+    font-weight: 400;
+    font-size: 10rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 2rem;
+    /* font-family: 'SalvadorAbstractDemoBold', sans-serif; */
+  }
+/* about */
+#about {
+    padding-top: 4rem; /* Adjust padding for smaller devices */
+   
+    grid-template-columns: 1fr; /* Change to a single column layout for smaller devices */
+    gap: 2rem;
+  }
   
-    #work-data {
-      grid-template-columns: 1fr; /* Adjust grid columns for smaller devices */
-    }
-  #contact{
+  #about > .about__myself > h2 {
+    font-size: 6rem; /* Decrease font size for smaller devices */
+    line-height: 7rem; /* Adjust line height */
+  }
+  
+  #about > .about__myself > h3 {
+    font-size: 3rem; /* Decrease font size for smaller devices */
+    line-height: 4rem; /* Adjust line height */
+  }
+  
+
+  #about .about__img img {
+    width: 100%; /* Ensure image fills container */
+
+    object-fit: cover;
+   
+  }
+  
+/* skills */
+#skills .tech__stack__container {
+  grid-template-columns: repeat(2, auto);
+
+  }
+  
+  .tech__stack__container > div {
+    border-radius: 0.8rem;
+    border: 1px solid #b8b8ff;
+    padding: 1.5rem;
+  }
+/* portfolio */
+.project-container {
     flex-direction: column;
   }
- #contact .container1,#contact .container2{
-    width: 100%;
- }
- #contact .container2 h2{
-    width: 100%;
- }
- #footer{
+  .project-container .project-item {
     flex-direction: column;
- }
   }
+  .project-container .project-item .project-left-part {
+    width: 100%;
+    height: 50vh;
+  }
+  .project-container .project-item .project-right-part {
+    width: 100%;
+    height: 25vh;
+  }
+
+
+/* contact */
+#contact{
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+  .contact__detail h2{
+      font-size: 5rem;
+      line-height: 6rem;
+      text-align: left;
+  }
+  .contact__detail h3{
+      font-size: 2rem;
+      line-height: 3rem;
+  }  
+
+/* footer */
+footer {
+    height: auto;
+    padding: 2rem;
+    flex-direction: column-reverse;
+    align-items:flex-start;
+    gap: 2rem;
+    border-top: 1px solid #141414;
+  }
+
+  footer .left__footer__section .credits{
+    font-size: 1rem;
+  }
+
+  
+}
+
+
+@media (max-width: 767.98px) { ... }
+
+
+@media (max-width: 991.98px) { ... }
+
+
+@media (max-width: 1199.98px) { ... }
+
+// `xxl` applies to x-large devices (large 
+@media (max-width: 1399.98px) { ... }
