@@ -13,47 +13,50 @@ fetch('assets/js/skills.json')
     let all_frontend_element="";
     data.frontend.forEach(skill => {
         all_frontend_element+=
-      `<div class="skill_div">
+      `<div class="common_design">
+
         <span>${skill.language}</span>
-        <img width="25" height="25" src="${skill.image}" alt="markdown"/>
+        <img width="25" height="25" src="${skill.image}" alt="${skill.language}"/>
       
-    </div>`;
-      frontendDiv.innerHTML=all_frontend_element;
+      </div>`;
     });
+    frontendDiv.innerHTML=all_frontend_element;
+
     
     // Render backend skills
     let all_backend_element="";
     data.backend.forEach(skill => {
         all_backend_element+=
-            `<div class="skill_div">
+            `<div class="common_design">
                 <span>${skill.language}</span>
-                <img width="25" height="25" src="${skill.image}" alt="markdown"/>
+                <img width="25" height="25" src="${skill.image}" alt="${skill.language}"/>
             </div>`;
-            backendDiv.innerHTML=all_backend_element;
     });
+    backendDiv.innerHTML=all_backend_element;
+
     
     // Render database skills
     let all_db_element="";
     data.database.forEach(skill => {
         all_db_element+=
-        `<div class="skill_div">
+        `<div class="common_design">
                 <span>${skill.language}</span>
-                <img width="25" height="25" src="${skill.image}" alt="markdown"/>
+                <img width="25" height="25" src="${skill.image}" alt="${skill.language}"/>
         </div>`;
-        databaseDiv.innerHTML=all_db_element;
     });
+    databaseDiv.innerHTML=all_db_element;
     
     // Render other skills
     let all_others_element="";
-
     data.others.forEach(skill => {
         all_others_element+=
-        `<div class="skill_div">
+        `<div class="common_design">
             <span>${skill.language}</span>
-            <img width="25" height="25" src="${skill.image}" alt="markdown"/>
+            <img width="25" height="25" src="${skill.image}" alt="${skill.language}"/>
         </div>`;
-        othersDiv.innerHTML=all_others_element;
     });
+    othersDiv.innerHTML=all_others_element;
+
   })
   .catch(error => console.error('Error fetching skills.json:', error));
 
@@ -62,15 +65,18 @@ const social__links_obj=[
   
   {
     name:"GitHub",
-    img:"https://img.icons8.com/ios-glyphs/60/github.png"
+    img:"https://img.icons8.com/ios-glyphs/60/github.png",
+    link:"https://github.com/berasumit611"
   },
   {
     name:"HackerRank",
-    img:"https://img.icons8.com/windows/32/hackerrank.png"
+    img:"https://img.icons8.com/windows/32/hackerrank.png",
+    link:"https://www.hackerrank.com/profile/berasumit611"
   },
   {
     name:"Linkedin",
-    img:"https://img.icons8.com/ios-glyphs/60/linkedin.png"
+    img:"https://img.icons8.com/ios-glyphs/60/linkedin.png",
+    link:"https://www.linkedin.com/in/berasumit611/"
   }
 
 ]
@@ -78,10 +84,12 @@ const social__links_ul=document.querySelector('.social__links');//select social_
 let all_social__links="";
 social__links_obj.forEach((data)=>{
   all_social__links+=
-  `<div class="skill_div">
-      <span>${data.name}</span>
-      <img width="25" height="25" src="${data.img}" alt="markdown"/>
-</div>`
+  `<a href="${data.link}" target="_blank">
+      <div class="common_design" title="${data.name}">
+        <span>${data.name}</span>
+        <img width="25" height="25" src="${data.img}" alt="${data.name}"/>
+      </div>
+    </a>`
 });
 social__links_ul.innerHTML=all_social__links;
 

@@ -36,11 +36,9 @@ ul {
 
 p {
   overflow-wrap: break-word;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  /* color: #212529; */
-  color: #3a3d50;
+  text-align: left;
+  font-size: 1.5rem;
+  color: #141414;
 }
 
 /*-----------button----------*/
@@ -73,9 +71,26 @@ body {
   position: relative; /* Add this to make the main element the reference point for positioning */
   background-color: #fffcf2;
 }
+.common_design{
+    border: 1px solid gray;
+    border-radius: 25px;
+                    
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: 0.3s;
+}
+
+  .common_design span {
+    font-size: 1.2rem;
+  }
+  .common_design:hover {
+    border: 0.5px solid rgb(19, 196, 48);
+  }
 
 /* header */
-.header {
+#header {
   width: 100%;
   height: 8rem;
   padding: 2rem 10rem;
@@ -91,18 +106,19 @@ body {
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   /* border: 1px solid rgba(255,255,255,0.25); */
-  color: #232228;
+  color: #000000;
   font-size: 1.5rem;
 }
-.header .navbar {
+#header .navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header .navbar .navbar__items {
+#header .navbar .navbar__items {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 .navbar__items .logo {
@@ -120,12 +136,13 @@ body {
   text-transform: uppercase;
   color: #312d89;
 }
+#header .navbar .navbar__links a{
+    display: flex;
+  align-items: center;
+  gap: 1rem;
 
-.header .navbar .navbar__links {
-  border: 1px solid blueviolet;
-  padding: 0.5rem 0.8rem;
-  border-radius: 25px;
 }
+
 
 /* main */
 main {
@@ -206,7 +223,7 @@ background-image: linear-gradient(135deg, #ffffff 0%, #d7e1ec 74%); */
 #about .about__myself {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  gap: 2rem;
 }
 #about > .about__myself > h2 {
   font-size: 10rem;
@@ -324,6 +341,7 @@ background-image: linear-gradient(135deg, #ffffff 0%, #d7e1ec 74%); */
 #skills .tech__stack__container {
   display: grid;
   grid-template-columns: repeat(4, auto);
+ 
   gap: 1rem;
 }
 
@@ -361,12 +379,14 @@ background-image: linear-gradient(135deg, #ffffff 0%, #d7e1ec 74%); */
 .skill_div:hover {
   border: 0.5px solid rgb(19, 196, 48);
 }
-
-/*-----------experience and education----------*/
-#experience-and-education {
-  /* background-color: #f9fcff;
-    background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);; */
+#skills .core__skills{
+  display: flex;
 }
+.core__skills div{
+  flex: 1;
+}
+/*-----------experience and education----------*/
+
 
 #experience-and-education h2 > span {
   font-size: 1.5rem;
@@ -456,10 +476,6 @@ background-image: linear-gradient(135deg, #ffffff 0%, #d7e1ec 74%); */
 }
 
 /*-----------portfolio----------*/
-#projects {
-  /* background-color: #5078f2;
-  background-image: linear-gradient(0deg, #5078f2 0%, #f4f5f5 74%); */
-}
 
 .project-container {
   display: flex;
@@ -566,7 +582,9 @@ background-image: linear-gradient(135deg, #ffffff 0%, #d7e1ec 74%); */
 
 /* contact */
 #contact{
+  margin-bottom: 0;
     display: flex;
+    
     gap: 2rem;
 }
 #contact div{
@@ -629,27 +647,33 @@ background-image: linear-gradient(135deg, #ffffff 0%, #d7e1ec 74%); */
   color: #000;
 }
 
-/*-----------FOOTER ✅----------*/
+/* footer */
 footer {
   background-color: #e5e5e5;
   width: 100%;
-  height: 15rem;
+  height: 12rem;
   padding: 2rem 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #000000;
+  border-top: 1px solid #141414;
 }
-footer .left-footer-section .credits {
-  color: #232228;
-  font-size: 1.5rem;
-  text-align: left;
+footer .left__footer__section{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-footer .right-footer-section .social-links ul {
+footer .left__footer__section .credits{
+  font-size: 1.2rem;
+}
+footer .left__footer__section img{
+  width: 50%;
+}
+footer .right__footer__section .links ul {
   display: flex;
   align-items: center;
 }
-footer .right-footer-section .social-links ul li i {
+footer .right__footer__section .links ul li i {
   font-size: 2rem;
   padding: 1rem;
   cursor: pointer;
