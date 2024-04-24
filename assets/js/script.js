@@ -107,14 +107,14 @@ const experience_data=[
     {
         date:"May 2023 - June 2023",
         job_role:"Web Development and Designing intern",
-        company:"[Oasis Infobyte] - Remote",
+        company:"X - Remote",
         description:`Developed some mini    responsive web application using HTML, CSS, and JavaScript.
         Gained knowledge of frontend responsive web design.`
     },
     {
         date:"May 2023 - June 2023",
         job_role:"Web Development intern",
-        company:"[InternPe] - Remote",
+        company:"Y - Remote",
         description:`Gained knowledge of frontend responsive web design.
         Responsible for building some responsive webpages.`
     }
