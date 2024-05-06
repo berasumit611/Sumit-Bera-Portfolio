@@ -267,3 +267,20 @@ scrollDiv.addEventListener("click", function() {
       behavior: "smooth"
     });
 });
+
+// hambarger menu
+document.addEventListener('DOMContentLoaded', function() {
+const bar_icon=document.getElementById('bar');
+const close_icon=document.getElementById('close');
+const navbar = document.querySelector('.navbar');
+
+bar_icon.addEventListener('click',()=>{
+  navbar.classList.add('active');
+});
+close_icon.addEventListener('click',()=>{
+  console.log("hi");
+
+  navbar.classList.remove('active');
+});
+
+});
