@@ -1,14 +1,57 @@
 /* small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
-    /* header */
-    #header {
-        width: 100%;
-        height: auto;
-        padding: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;}
-        
+  .site__logo,#close{
+ 
+    border: 0.5px solid #f8f9fa;
+  }
+    /* header start*/
+    #header{
+  background-color: #141414;
+
+     padding: 3rem;
+  color: #f8f9fa;
+    }
+   #header .navbar{
+    background-color: #141414;
+    height: auto;
+    width: 100vw;
+
+    padding: 5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    
+    position: fixed;
+    left: 0;
+    /*bydefaulthide*/
+    top: -300px;
+    
+    
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+   }
+   #close{
+    margin-top: 2rem;
+    display:flex;
+   }
+   #header .navbar.active{
+    top: 0;
+   }
+#nav__mobile{
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+
+    /* header end*/
+    
   /* main */
 main {
     padding: 0;
