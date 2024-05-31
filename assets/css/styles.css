@@ -74,6 +74,15 @@ body {
   position: relative; /* Add this to make the main element the reference point for positioning */
   background-color: #fffcf2;
 }
+:root{
+  --white-1:#f9f6ee;
+  --white-2:#fffff0;
+  --white-3:#fcf5e5;
+  --white-4:#e2dfd2;
+  --white-5:#fff5ee;
+  --main-white:#fffcf2;
+
+}
 .common_design{
     border: 1px solid gray;
     border-radius: 25px;
