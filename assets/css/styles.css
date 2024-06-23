@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
 *,
 *::after,
 *::before {
@@ -23,6 +28,7 @@ body{
   overflow-x: hidden;
   position: relative;
 }
+
 a,
 a:hover,
 a:active {
@@ -75,12 +81,17 @@ body {
   background-color: #fffcf2;
 }
 :root{
+  --pure-black:#000000;
+  --pure-white:#ffffff;
+
   --white-1:#f9f6ee;
   --white-2:#fffff0;
   --white-3:#fcf5e5;
   --white-4:#e2dfd2;
   --white-5:#fff5ee;
   --main-white:#fffcf2;
+
+  --nav-font-size:1.5rem;
 
 }
 .common_design{
@@ -110,11 +121,13 @@ body {
     border-radius: 50%;
     border: 0.5px solid #232228;
   }
-/* header */
+
+/* ? header */
 #header {
   width: 100%;
   height: 8rem;
   padding: 2rem 10rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,8 +140,11 @@ body {
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   /* border: 1px solid rgba(255,255,255,0.25); */
-  color: #000000;
-  font-size: 1.5rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color:var(--pure-black);
+  font-size: var(--nav-font-size);
 }
 #header .navbar {
   width: 100%;
@@ -142,88 +158,135 @@ body {
   flex-wrap: wrap;
   gap: 1.5rem;
 }
-
-
 .navbar__items a:hover {
   text-transform: uppercase;
   color: #312d89;
 }
-
 #header .navbar .navbar__links a{
     display: flex;
-  align-items: center;
-  gap: 1rem;
-
+    align-items: center;
+     gap: 1rem;
 }
 /* mobile device navbar bydefault hide */
 #nav__mobile,#close{
   display: none;
 }
-
-/* main */
-main {
-  padding: 1rem 10rem;
+/* ? common padding */
+.cp{
+  padding: 10rem 12rem 0;
 }
+/* ? main */
+/* main {
+  padding: 1rem 10rem;
+} */
 /* each section */
 section {
   width: 100%;
-  padding: 10rem 2rem 2rem;
+  
+  /* padding: 10rem 2rem 2rem;
   border-radius: 0.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; */
 }
 
 /* hero */
+.email-block{
+  display: block;
+  position: fixed;
+  right: -50px;
+  bottom: 130px;
+  
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size:small;
+
+
+  transform: rotate(0.25turn);
+  -webkit-transform: rotate(0.25turn);
+  -moz-transform: rotate(0.25turn);
+  -ms-transform: rotate(0.25turn);
+  -o-transform: rotate(0.25turn);
+}
+.email-block::after{
+  content: '';
+  display: inline-block; /* Ensure the pseudo-element is displayed */
+  margin-left: 10px; /* Adjust spacing between the line and the text */
+  vertical-align: middle; /* Align the line with the middle of the text */
+
+  width: 100px;
+  height: 1px;
+  background-color: var(--pure-black);
+}
+
 #hero {
   min-height: 85vh;
   overflow: hidden;
   position: relative;
 }
-#hero > .img__container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-#hero .img__container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-/* #hero > .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
- background-color: rgba(0, 0, 0, 0.89);
-} */
-#hero > .text__container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#hero > .text__container h1 {
-  font-weight: 500;
-  /* line-height: 6rem;
-    font-size: 4.5rem; */
-  font-size: 25rem;
-  color: whitesmoke;
-  text-align: center;
-  padding: 2rem;
-  /* font-family: 'SalvadorAbstractDemoBold', sans-serif; */
-}
 
-/*-----------all subtitle ✅----------*/
-h2 {
-  justify-self: center;
-  padding: 2rem 2rem 2rem 0;
-  font-weight: 300;
-  line-height: 4rem;
+#hero > .hero_detail h2{
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size:medium;
+  
+  justify-self: left;
+  padding:0;
+ 
+  line-height:normal;
   font-size: 3.5rem;
   margin-bottom: 1rem;
+}
+#hero > .hero_detail h1{
+  font-size: 8rem;
+  line-height: 10rem;
+  text-align: left
+}
+/* #hero .special{
+ 
+  
+} */
+
+ .sp2{
+
+  color: #13c430;
+ }
+#hero > .hero_detail p{
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size:medium;
+  width: 60%;
+}
+#hero > .hero_detail button{
+  border: 1px solid #141414;
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+  font: 1.5rem;
+}
+/*-----------all subtitle ✅----------*/
+h2 {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size:medium;
+  
+  justify-self: left;
+  padding:0;
+ 
+  line-height:normal;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+ h2::after{
+  content: '';
+  display: inline-block; 
+  margin-left: 10px; 
+  vertical-align: middle; 
+
+  width: 300px;
+  height: 1px;
+  background-color: var(--pure-black);
 }
 /*-----------about section ✅----------*/
 
@@ -241,17 +304,32 @@ background-image: linear-gradient(135deg, #ffffff 0%, #d7e1ec 74%); */
   flex-direction: column;
   gap: 2rem;
 }
+#about > .about__myself > h2::after{
+  content: '';
+  display: inline-block; 
+  margin-left: 10px; 
+  vertical-align: middle; 
+
+  width: 300px;
+  height: 1px;
+  background-color: var(--pure-black);
+}
 #about > .about__myself > h2 {
-  font-size: 10rem;
-  line-height: 11rem;
-  text-align: left;
+
+
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size:medium;
+  
+  justify-self: left;
+  padding:0;
+ 
+  line-height:normal;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
 }
-#about > .about__myself > h3 {
-  font-weight: 200;
-  font-size: 5rem;
-  line-height: 6rem;
-  text-align: left;
-}
+
 .about__myself > .social__links {
   display: flex;
   flex-wrap: wrap;
@@ -261,7 +339,7 @@ background-image: linear-gradient(135deg, #ffffff 0%, #d7e1ec 74%); */
 #about .about__img img {
   width: 100%;
   object-fit: cover;
-  border-radius: 0.8rem;
+  
 }
 
 #about .skills-stats {

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canvas Arc Example</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="1024" height="1500" style="border:1px solid #000000;"></canvas>
+
+<script>
+  // Get the canvas element by its ID
+  var canvas = document.getElementById('myCanvas');
+  // Get the 2D drawing context
+  var ctx = canvas.getContext('2d');
+
+  // Begin a new path
+  ctx.beginPath();
+  // Draw an arc (x, y, radius, startAngle, endAngle, counterclockwise)
+  ctx.arc(250, 150, 100, 0, Math.PI, false); // A semicircle
+  // Set the color of the arc
+  ctx.strokeStyle = 'blue';
+  // Draw the arc
+  ctx.stroke();
+</script>
+
+</body>
+</html>
