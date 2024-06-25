@@ -1,10 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-.space-mono-regular {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
+
+:root{
+  --pure-black:#000000;
+  --pure-white:#ffffff;
+
+  --white-1:#f9f6ee;
+  --white-2:#fffff0;
+  --white-3:#fcf5e5;
+  --white-4:#e2dfd2;
+  --white-5:#fff5ee;
+
+  --bg-color:#fffcf2;
+  --font-black:#141414;
+
+  --hg1:#13c430;
+
+  --hg2:#13c430;
+  --hg3:#009A6E;
+  --hg4:#b3eda9;
+  --hg5:#EBFADB;
+  
+
+  --nav-font-size:1.5rem;
+
 }
+
 *,
 *::after,
 *::before {
@@ -18,15 +39,26 @@
   border: none;
   transition: all 0.2s linear;
 }
+/* Default Browser Font Size: Most browsers have a default font size of 16px.
 
+62.5% of 16px: By setting the font size to 62.5% of the default 16px, you get:
+
+16px×0.625=10px
+
+so 1.5rem = 15px
+ */
 html {
-  font-size: 62.5%;
+  /* 1rem =10px */
+  font-size: 62.5%; 
   scroll-behavior: smooth;
 }
 body{
   width: 100%;
   overflow-x: hidden;
   position: relative;
+  background-color: var(--bg-color);
+  font-family: "Space Mono", monospace;
+  font-style: normal;
 }
 
 a,
@@ -43,13 +75,78 @@ ul {
   margin: 0;
 }
 
-p {
-  overflow-wrap: break-word;
+/* Default styles for headings */
+h1, h2, h3, h4 {
+  color: var(--font-black);
+  margin: 20px 0; 
+  line-height: 1.2; 
   text-align: left;
-  font-size: 1.5rem;
-  color: #141414;
+  
+
 }
 
+
+h1 {
+  font-size: 6rem; 
+  font-weight: bold;
+}
+
+h2 {
+font-size: 3.5rem;
+font-weight: normal;
+}
+
+h3 {
+  font-size: 2rem; 
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 1.5em; 
+  font-weight: normal;
+}
+
+
+p {
+  margin: 0 0 1rem 0;
+  overflow-wrap: break-word;
+  text-align:justify;
+  font-size: 1.6rem;
+  color: var(--font-black);
+  line-height: 1.5;
+}
+   /* Button styles */
+   button {
+    font-family: "Space Mono", monospace;
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 1.2;
+    color:var(--font-black);
+    background:transparent;
+    border: 1px solid var(--font-black);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease  ;
+    -webkit-transition: background-color 0.3s ease, transform 0.3s ease;
+    -moz-transition: background-color 0.3s ease, transform 0.3s ease;
+    -ms-transition: background-color 0.3s ease, transform 0.3s ease;
+    -o-transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button:hover {
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  background-color:var(--hg4);
+}
+
+button:focus {
+  outline: none; 
+}
 /*-----------button----------*/
 .btn {
   padding: 0.5rem 1rem;
@@ -74,26 +171,7 @@ p {
 .btn:hover img {
   transform: translateX(0.5rem);
 }
-body {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  position: relative; /* Add this to make the main element the reference point for positioning */
-  background-color: #fffcf2;
-}
-:root{
-  --pure-black:#000000;
-  --pure-white:#ffffff;
 
-  --white-1:#f9f6ee;
-  --white-2:#fffff0;
-  --white-3:#fcf5e5;
-  --white-4:#e2dfd2;
-  --white-5:#fff5ee;
-  --main-white:#fffcf2;
-
-  --nav-font-size:1.5rem;
-
-}
 .common_design{
     border: 1px solid gray;
     border-radius: 25px;
@@ -121,9 +199,38 @@ body {
     border-radius: 50%;
     border: 0.5px solid #232228;
   }
-
-/* ? header */
-#header {
+  /** -----------optional block ----- */
+  .email-block{
+    display: block;
+    position: fixed;
+    right: -50px;
+    bottom: 130px;
+    
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size:small;
+  
+  
+    transform: rotate(0.25turn);
+    -webkit-transform: rotate(0.25turn);
+    -moz-transform: rotate(0.25turn);
+    -ms-transform: rotate(0.25turn);
+    -o-transform: rotate(0.25turn);
+  }
+  .email-block::after{
+    content: '';
+    display: inline-block; /* Ensure the pseudo-element is displayed */
+    margin-left: 10px; /* Adjust spacing between the line and the text */
+    vertical-align: middle; /* Align the line with the middle of the text */
+  
+    width: 100px;
+    height: 1px;
+    background-color: var(--pure-black);
+  }
+   /** -----------optional block ----- */
+  /* ? header */
+  #header {
   width: 100%;
   height: 8rem;
   padding: 2rem 10rem;
@@ -135,7 +242,7 @@ body {
   position: sticky; /* Use sticky for relative positioning within main */
   top: 0; /* Stays at the top of the main element */
   z-index: 100; /* Ensure it stays on top of other content */
-
+  
   background: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
@@ -171,113 +278,25 @@ body {
 #nav__mobile,#close{
   display: none;
 }
+/* ? main */
 /* ? common padding */
 .cp{
   padding: 10rem 12rem 0;
 }
-/* ? main */
-/* main {
-  padding: 1rem 10rem;
-} */
-/* each section */
 section {
   width: 100%;
-  
-  /* padding: 10rem 2rem 2rem;
-  border-radius: 0.8rem;
-  margin-bottom: 2rem; */
+  min-height: calc(100vh - 8rem);
 }
 
-/* hero */
-.email-block{
-  display: block;
-  position: fixed;
-  right: -50px;
-  bottom: 130px;
-  
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-  font-size:small;
-
-
-  transform: rotate(0.25turn);
-  -webkit-transform: rotate(0.25turn);
-  -moz-transform: rotate(0.25turn);
-  -ms-transform: rotate(0.25turn);
-  -o-transform: rotate(0.25turn);
-}
-.email-block::after{
-  content: '';
-  display: inline-block; /* Ensure the pseudo-element is displayed */
-  margin-left: 10px; /* Adjust spacing between the line and the text */
-  vertical-align: middle; /* Align the line with the middle of the text */
-
-  width: 100px;
-  height: 1px;
-  background-color: var(--pure-black);
-}
-
-#hero {
-  min-height: 85vh;
-  overflow: hidden;
-  position: relative;
-}
-
-#hero > .hero_detail h2{
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-  font-size:medium;
-  
-  justify-self: left;
-  padding:0;
- 
-  line-height:normal;
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
-#hero > .hero_detail h1{
-  font-size: 8rem;
-  line-height: 10rem;
-  text-align: left
-}
-/* #hero .special{
- 
-  
-} */
-
- .sp2{
-
-  color: #13c430;
+/* ? hero */
+ .hg1{
+  color: var(--hg1);
  }
-#hero > .hero_detail p{
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-  font-size:medium;
-  width: 60%;
+
+#hero > .hero_detail button{ 
+ border: 0;
 }
-#hero > .hero_detail button{
-  border: 1px solid #141414;
-  padding: 1.5rem 2rem;
-  margin-top: 2rem;
-  font: 1.5rem;
-}
-/*-----------all subtitle ✅----------*/
-h2 {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-  font-size:medium;
-  
-  justify-self: left;
-  padding:0;
- 
-  line-height:normal;
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
+
  h2::after{
   content: '';
   display: inline-block; 

@@ -1,3 +1,6 @@
+
+
+
 //1> render skills
 // Fetch the skills.json file
 fetch('assets/js/skills.json')
@@ -284,3 +287,5 @@ close_icon.addEventListener('click',()=>{
 });
 
 });
+
+
